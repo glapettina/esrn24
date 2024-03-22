@@ -386,10 +386,6 @@
                <li><a href="43tm-artistica"><i class="fa fa-circle-o"></i> 4º 3ra. - TM</a></li>
                <li><a href="41tt-artistica"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
                <li><a href="42tt-artistica"><i class="fa fa-circle-o"></i> 4º 2da. - TT</a></li>
-               <li><a href="51tm-artistica"><i class="fa fa-circle-o"></i> 5º 1ra. - TM</a></li>
-               <li><a href="52tm-artistica"><i class="fa fa-circle-o"></i> 5º 2da. - TM</a></li>
-               <li><a href="51tt-artistica"><i class="fa fa-circle-o"></i> 5º 1ra. - TT</a></li>
-               <li><a href="52tt-artistica"><i class="fa fa-circle-o"></i> 5º 2da. - TT</a></li>
               </ul>
 
            
