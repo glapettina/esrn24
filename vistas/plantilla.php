@@ -259,13 +259,9 @@
           $_GET["ruta"] == "52tm-edfisica" ||
           $_GET["ruta"] == "51tt-edfisica" ||
           $_GET["ruta"] == "52tt-edfisica" ||
-          $_GET["ruta"] == "51tm-artistica" ||
-          $_GET["ruta"] == "52tm-artistica" ||
-          $_GET["ruta"] == "51tt-artistica" ||
-          $_GET["ruta"] == "52tt-artistica" ||
-          $_GET["ruta"] == "3-desarrollo-turismo" ||
-          $_GET["ruta"] == "3-introduccion-turismo" ||
-          $_GET["ruta"] == "4-ambiente-turismo" ||
+          $_GET["ruta"] == "3-quimica-ciencias-naturales" ||
+          $_GET["ruta"] == "3-seminario-educacion" ||
+          $_GET["ruta"] == "4-tierra-ciencias-naturales" ||
           $_GET["ruta"] == "4-generacion-turismo" ||
           $_GET["ruta"] == "4-produccion-turismo" ||
           $_GET["ruta"] == "5-comunicacion-turismo" ||

@@ -649,18 +649,18 @@
 
 
 		/*=============================================
-		COPIAR SABERES APRECIACION (ARTE - MUSICA)           
+		COPIAR SABERES QUIMICA (CIENCIAS NATURALES)           
 		=============================================*/	
 
-		static public function ctrCopiarSaberesApreciacion($tabla, $curso, $ncurso1, $ncurso2, $ncurso3){
+		static public function ctrCopiarSaberesQuimica($tabla, $curso, $ncurso1, $ncurso2, $ncurso3){
 
-				if (isset($_POST["copiaSaberesApreciacion"])) {
+				if (isset($_POST["copiaSaberesQuimica"])) {
 								
 
-					$datos = array("saberes_apreciacion" => $_POST["copiaSaberesApreciacion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3);
+					$datos = array("saberes_quimica" => $_POST["copiaSaberesQuimica"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3);
 
 
-					$respuesta = ModeloInformes::mdlCopiarSaberesApreciacion($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlCopiarSaberesQuimica($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -689,18 +689,18 @@
 
 
 		/*=============================================
-		COPIAR SABERES LENGUAJE 3 (ARTE - MUSICA)          
+		COPIAR SABERES SEMINARIO 3 (EDUCACION)          
 		=============================================*/	
 
-		static public function ctrCopiarSaberesLenguaje3($tabla, $curso, $ncurso1, $ncurso2, $ncurso3){
+		static public function ctrCopiarSaberesSeminario3($tabla, $curso, $ncurso1, $ncurso2, $ncurso3){
 
-				if (isset($_POST["copiaSaberesLenguaje3"])) {
+				if (isset($_POST["copiaSaberesSeminario3"])) {
 								
 
-					$datos = array("saberes_lenguaje3" => $_POST["copiaSaberesLenguaje3"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3);
+					$datos = array("saberes_seminario3" => $_POST["copiaSaberesSeminario3"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3);
 
 
-					$respuesta = ModeloInformes::mdlCopiarSaberesLenguaje3($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlCopiarSaberesSeminario3($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -729,18 +729,18 @@
 
 
 		/*=============================================
-		COPIAR SABERES LENGUAJE 4 (ARTE - MUSICA)           
+		COPIAR SABERES TIERRA 4 (CIENCIAS NATURALES)           
 		=============================================*/	
 
-		static public function ctrCopiarSaberesLenguaje4($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+		static public function ctrCopiarSaberesTierra4($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
 
-				if (isset($_POST["copiaSaberesLenguaje4"])) {
+				if (isset($_POST["copiaSaberesTierra4"])) {
 								
 
-					$datos = array("saberes_lenguaje4" => $_POST["copiaSaberesLenguaje4"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+					$datos = array("saberes_tierra4" => $_POST["copiaSaberesTierra4"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
-					$respuesta = ModeloInformes::mdlCopiarSaberesLenguaje4($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlCopiarSaberesTierra4($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -1649,18 +1649,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME APRECIACION
+		EDITAR INFORME QUIMICA
 		=============================================*/
 
-		static public function ctrEditarInformeApreciacion($tabla,$curso){
+		static public function ctrEditarInformeQuimica($tabla,$curso){
 
-			if (isset($_POST["saberesApreciacion"])) {
+			if (isset($_POST["saberesQuimica"])) {
 								
 
-					$datos = array("saberes_apreciacion" => $_POST["saberesApreciacion"], "aprecia_apreciacion" => $_POST["apreciaApreciacion"], "asistencia_apreciacion" => $_POST["asistenciaApreciacion"], "observa_apreciacion" => $_POST["observaApreciacion"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+					$datos = array("saberes_quimica" => $_POST["saberesQuimica"], "aprecia_quimica" => $_POST["apreciaQuimica"], "asistencia_quimica" => $_POST["asistenciaQuimica"], "observa_quimica" => $_POST["observaQuimica"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
 
 
-					$respuesta = ModeloInformes::mdlEditarInformeApreciacion($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlEditarInformeQuimica($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -1689,18 +1689,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME LENGUAJE 3
+		EDITAR INFORME SEMINARIO 3
 		=============================================*/
 
-		static public function ctrEditarInformeLenguaje3($tabla,$curso){
+		static public function ctrEditarInformeSeminario3($tabla,$curso){
 
-			if (isset($_POST["saberesLenguaje3"])) {
+			if (isset($_POST["saberesSeminario3"])) {
 								
 
-					$datos = array("saberes_lenguaje3" => $_POST["saberesLenguaje3"], "aprecia_lenguaje3" => $_POST["apreciaLenguaje3"], "asistencia_lenguaje3" => $_POST["asistenciaLenguaje3"], "observa_lenguaje3" => $_POST["observaLenguaje3"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+					$datos = array("saberes_seminario3" => $_POST["saberesSeminario3"], "aprecia_seminario3" => $_POST["apreciaSeminario3"], "asistencia_seminario3" => $_POST["asistenciaSeminario3"], "observa_seminario3" => $_POST["observaSeminario3"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
 
 
-					$respuesta = ModeloInformes::mdlEditarInformeLenguaje3($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlEditarInformeSeminario3($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -1730,18 +1730,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME LENGUAJE 4 (ARTE - MUSICA)
+		EDITAR INFORME TIERRA 4 (CIENCIAS NATURALES)
 		=============================================*/
 
-		static public function ctrEditarInformeLenguaje4($tabla,$curso){
+		static public function ctrEditarInformeTierra4($tabla,$curso){
 
-			if (isset($_POST["saberesLenguaje4"])) {
+			if (isset($_POST["saberesTierra4"])) {
 								
 
-					$datos = array("saberes_lenguaje4" => $_POST["saberesLenguaje4"], "aprecia_lenguaje4" => $_POST["apreciaLenguaje4"], "asistencia_lenguaje4" => $_POST["asistenciaLenguaje4"], "observa_lenguaje4" => $_POST["observaLenguaje4"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+					$datos = array("saberes_tierra4" => $_POST["saberesTierra4"], "aprecia_tierra4" => $_POST["apreciaTierra4"], "asistencia_tierra4" => $_POST["asistenciaTierra4"], "observa_tierra4" => $_POST["observaTierra4"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
 
 
-					$respuesta = ModeloInformes::mdlEditarInformeLenguaje4($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlEditarInformeTierra4($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {

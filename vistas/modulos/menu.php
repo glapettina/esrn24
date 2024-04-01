@@ -417,7 +417,7 @@
                                 <ul class="treeview-menu">
                                     <li class="treeview">
                                       <li>
-                                            <a href="3-quimica-ambiental">
+                                            <a href="3-quimica-ciencias-naturales">
                                             <i class="fa fa-check-circle-o"></i>
                                                 Química Ambiental                          
                                             </a>
@@ -436,7 +436,7 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                     <li>
-                                          <a href="4-ciencia-tierra1">
+                                          <a href="4-tierra-ciencias-naturales">
                                           <i class="fa fa-check-circle-o"></i>
                                               Ciencias de la Tierra I                          
                                           </a>
@@ -511,7 +511,7 @@
                                 <ul class="treeview-menu">
                                     <li class="treeview">
                                       <li>
-                                            <a href="3-seminario-taller">
+                                            <a href="3-seminario-educacion">
                                             <i class="fa fa-check-circle-o"></i>
                                                 Taller Educ. Cultura. y Sub.                          
                                             </a>

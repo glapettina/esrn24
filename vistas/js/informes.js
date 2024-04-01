@@ -737,10 +737,10 @@ $(".tablas").on("click", ".btnEditarInformeTaller", function(){
 
 
 /*=============================================
-EDITAR INFORME APRECIACION (ARTE - MUSICA)
+EDITAR INFORME QUIMICA (CIENCIAS NATURALES)
 =============================================*/
 
-$(".tablas").on("click", ".btnEditarInformeApreciacion", function(){
+$(".tablas").on("click", ".btnEditarInformeQuimica", function(){
 
 
 	var idAlumno = $(this).attr("idAlumno");
@@ -772,10 +772,10 @@ $(".tablas").on("click", ".btnEditarInformeApreciacion", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesApreciacion").val(respuesta["saberes_apreciacion"]);
-			$("#apreciaApreciacion").val(respuesta["aprecia_apreciacion"]);
-			$("#asistenciaApreciacion").val(respuesta["asistencia_apreciacion"]);
-			$("#observaApreciacion").val(respuesta["observa_apreciacion"]);			
+			$("#saberesQuimica").val(respuesta["saberes_quimica"]);
+			$("#apreciaQuimica").val(respuesta["aprecia_quimica"]);
+			$("#asistenciaQuimica").val(respuesta["asistencia_quimica"]);
+			$("#observaQuimica").val(respuesta["observa_quimica"]);			
 
 
 								
@@ -787,10 +787,10 @@ $(".tablas").on("click", ".btnEditarInformeApreciacion", function(){
 
 
 /*=============================================
-EDITAR INFORME LENGUAJE 3
+EDITAR INFORME SEMINARIO 3
 =============================================*/
 
-$(".tablas").on("click", ".btnEditarInformeLenguaje3", function(){
+$(".tablas").on("click", ".btnEditarInformeSeminario3", function(){
 
 
 	var idAlumno = $(this).attr("idAlumno");
@@ -822,10 +822,10 @@ $(".tablas").on("click", ".btnEditarInformeLenguaje3", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesLenguaje3").val(respuesta["saberes_lenguaje3"]);
-			$("#apreciaLenguaje3").val(respuesta["aprecia_lenguaje3"]);
-			$("#asistenciaLenguaje3").val(respuesta["asistencia_lenguaje3"]);
-			$("#observaLenguaje3").val(respuesta["observa_lenguaje3"]);			
+			$("#saberesSeminario3").val(respuesta["saberes_seminario3"]);
+			$("#apreciaSeminario3").val(respuesta["aprecia_seminario3"]);
+			$("#asistenciaSeminario3").val(respuesta["asistencia_seminario3"]);
+			$("#observaSeminario3").val(respuesta["observa_seminario3"]);			
 
 
 								
@@ -837,10 +837,10 @@ $(".tablas").on("click", ".btnEditarInformeLenguaje3", function(){
 
 
 /*=============================================
-EDITAR INFORME LENGUAJE 4 (ARTE - MUSICA)
+EDITAR INFORME TIERRA 4 (CIENCIAS NATURALES)
 =============================================*/
 
-$(".tablas").on("click", ".btnEditarInformeLenguaje4", function(){
+$(".tablas").on("click", ".btnEditarInformeTierra4", function(){
 
 
 	var idAlumno = $(this).attr("idAlumno");
@@ -871,10 +871,10 @@ $(".tablas").on("click", ".btnEditarInformeLenguaje4", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesLenguaje4").val(respuesta["saberes_lenguaje4"]);
-			$("#apreciaLenguaje4").val(respuesta["aprecia_lenguaje4"]);
-			$("#asistenciaLenguaje4").val(respuesta["asistencia_lenguaje4"]);
-			$("#observaLenguaje4").val(respuesta["observa_lenguaje4"]);			
+			$("#saberesTierra4").val(respuesta["saberes_tierra4"]);
+			$("#apreciaTierra4").val(respuesta["aprecia_tierra4"]);
+			$("#asistenciaTierra4").val(respuesta["asistencia_tierra4"]);
+			$("#observaTierra4").val(respuesta["observa_tierra4"]);			
 
 
 								

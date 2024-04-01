@@ -555,15 +555,15 @@
 
 
 		/*=============================================
-		COPIAR SABERES APRECIACION (ARTE-MUSICA)           
+		COPIAR SABERES QUIMICA (CIENCIAS NATURALES)           
 		=============================================*/
 
-		static public function mdlCopiarSaberesApreciacion($tabla, $curso, $datos){
+		static public function mdlCopiarSaberesQuimica($tabla, $curso, $datos){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_apreciacion = :saberes_apreciacion WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_quimica = :saberes_quimica WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3");
 
-			$stmt->bindParam(":saberes_apreciacion", $datos["saberes_apreciacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_quimica", $datos["saberes_quimica"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
@@ -585,15 +585,15 @@
 
 
 		/*=============================================
-		COPIAR SABERES LENGUAJE 3           
+		COPIAR SABERES SEMINARIO 3           
 		=============================================*/
 
-		static public function mdlCopiarSaberesLenguaje3($tabla, $curso, $datos){
+		static public function mdlCopiarSaberesSeminario3($tabla, $curso, $datos){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_lenguaje3 = :saberes_lenguaje3 WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_seminario3 = :saberes_seminario3 WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3");
 
-			$stmt->bindParam(":saberes_lenguaje3", $datos["saberes_lenguaje3"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_seminario3", $datos["saberes_seminario3"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
@@ -615,15 +615,15 @@
 
 
 		/*=============================================
-		COPIAR SABERES LENGUAJE 4 (ARTE - MUSICA)           
+		COPIAR SABERES TIERRA 4 (CIANCIAS NATURALES)           
 		=============================================*/
 
-		static public function mdlCopiarSaberesLenguaje4($tabla, $curso, $datos){
+		static public function mdlCopiarSaberesTierra4($tabla, $curso, $datos){
 
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_lenguaje4 = :saberes_lenguaje4 WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tierra4 = :saberes_tierra4 WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
 
-			$stmt->bindParam(":saberes_lenguaje4", $datos["saberes_lenguaje4"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_tierra4", $datos["saberes_tierra4"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
 			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
@@ -1310,18 +1310,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME APRECIACION (ARTE - MUSICA)            
+		EDITAR INFORME QUIMICA (CIENCIAS NATURALES)            
 		=============================================*/
 
-		static public function mdlEditarInformeApreciacion($tabla, $curso, $datos){
+		static public function mdlEditarInformeQuimica($tabla, $curso, $datos){
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_apreciacion = :saberes_apreciacion, aprecia_apreciacion = :aprecia_apreciacion, asistencia_apreciacion = :asistencia_apreciacion, observa_apreciacion = :observa_apreciacion, id_usuario = :id_usuario WHERE id = :id");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_quimica = :saberes_quimica, aprecia_quimica = :aprecia_quimica, asistencia_quimica = :asistencia_quimica, observa_quimica = :observa_quimica, id_usuario = :id_usuario WHERE id = :id");
 
 			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
-			$stmt->bindParam(":saberes_apreciacion", $datos["saberes_apreciacion"], PDO::PARAM_STR);
-			$stmt->bindParam(":aprecia_apreciacion", $datos["aprecia_apreciacion"], PDO::PARAM_STR);
-			$stmt->bindParam(":asistencia_apreciacion", $datos["asistencia_apreciacion"], PDO::PARAM_STR);
-			$stmt->bindParam(":observa_apreciacion", $datos["observa_apreciacion"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_quimica", $datos["saberes_quimica"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_quimica", $datos["aprecia_quimica"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_quimica", $datos["asistencia_quimica"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_quimica", $datos["observa_quimica"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
 
 
@@ -1340,18 +1340,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME LENGUAJE 3            
+		EDITAR INFORME SEMINARIO 3            
 		=============================================*/
 
-		static public function mdlEditarInformeLenguaje3($tabla, $curso, $datos){
+		static public function mdlEditarInformeSeminario3($tabla, $curso, $datos){
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_lenguaje3 = :saberes_lenguaje3, aprecia_lenguaje3 = :aprecia_lenguaje3, asistencia_lenguaje3 = :asistencia_lenguaje3, observa_lenguaje3 = :observa_lenguaje3, id_usuario = :id_usuario WHERE id = :id");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_seminario3 = :saberes_seminario3, aprecia_seminario3 = :aprecia_seminario3, asistencia_seminario3 = :asistencia_seminario3, observa_seminario3 = :observa_seminario3, id_usuario = :id_usuario WHERE id = :id");
 
 			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
-			$stmt->bindParam(":saberes_lenguaje3", $datos["saberes_lenguaje3"], PDO::PARAM_STR);
-			$stmt->bindParam(":aprecia_lenguaje3", $datos["aprecia_lenguaje3"], PDO::PARAM_STR);
-			$stmt->bindParam(":asistencia_lenguaje3", $datos["asistencia_lenguaje3"], PDO::PARAM_STR);
-			$stmt->bindParam(":observa_lenguaje3", $datos["observa_lenguaje3"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_seminario3", $datos["saberes_seminario3"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_seminario3", $datos["aprecia_seminario3"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_seminario3", $datos["asistencia_seminario3"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_seminario3", $datos["observa_seminario3"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
 
 
@@ -1370,18 +1370,18 @@
 
 
 		/*=============================================
-		EDITAR INFORME LENGUAJE 4 (ARTE - MUSICA)           
+		EDITAR INFORME TIERRA 4 (CIENCIAS NATURALES)           
 		=============================================*/
 
-		static public function mdlEditarInformeLenguaje4($tabla, $curso, $datos){
+		static public function mdlEditarInformeTierra4($tabla, $curso, $datos){
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_lenguaje4 = :saberes_lenguaje4, aprecia_lenguaje4 = :aprecia_lenguaje4, asistencia_lenguaje4 = :asistencia_lenguaje4, observa_lenguaje4 = :observa_lenguaje4, id_usuario = :id_usuario WHERE id = :id");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tierra4 = :saberes_tierra4, aprecia_tierra4 = :aprecia_tierra4, asistencia_tierra4 = :asistencia_tierra4, observa_tierra4 = :observa_tierra4, id_usuario = :id_usuario WHERE id = :id");
 
 			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
-			$stmt->bindParam(":saberes_lenguaje4", $datos["saberes_lenguaje4"], PDO::PARAM_STR);
-			$stmt->bindParam(":aprecia_lenguaje4", $datos["aprecia_lenguaje4"], PDO::PARAM_STR);
-			$stmt->bindParam(":asistencia_lenguaje4", $datos["asistencia_lenguaje4"], PDO::PARAM_STR);
-			$stmt->bindParam(":observa_lenguaje4", $datos["observa_lenguaje4"], PDO::PARAM_STR);
+			$stmt->bindParam(":saberes_tierra4", $datos["saberes_tierra4"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_tierra4", $datos["aprecia_tierra4"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_tierra4", $datos["asistencia_tierra4"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_tierra4", $datos["observa_tierra4"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
 
 

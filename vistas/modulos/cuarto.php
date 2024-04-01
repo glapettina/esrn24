@@ -227,8 +227,8 @@
                   <select class="form-control input-lg" name="nuevaModalidad">
                     
                     <option value="">Seleccionar modalidad</option>
-                    <option value="Arte-Música">Arte-Música</option>
-                    <option value="Turismo">Turismo</option>
+                    <option value="Ciencias Naturales">Ciencias Naturales</option>
+                    <option value="Educación">Educación</option>
 
                   </select>
 
@@ -378,8 +378,8 @@
                   <select class="form-control input-lg" id="editarModalidad" name="editarModalidad">
                     
                     <option value="">Seleccionar modalidad</option>
-                    <option value="Arte-Música">Arte-Música</option>
-                    <option value="Turismo">Turismo</option>
+                    <option value="Ciencias Naturales">Ciencias Naturales</option>
+                    <option value="Educación">Educación</option>
 
                   </select>
 
