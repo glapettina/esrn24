@@ -527,18 +527,18 @@
 		}
 
 		/*=============================================
-		COPIAR SABERES COMUNICACION (TURISMO)           
+		COPIAR SABERES BIOTECNOLOGÍA (CIENCIAS NATURALES)           
 		=============================================*/	
 
-		static public function ctrCopiarSaberesComunicacion($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+		static public function ctrCopiarSaberesBiotecnologia($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
 
-				if (isset($_POST["copiaSaberesComunicacion"])) {
+				if (isset($_POST["copiaSaberesBiotecnologia"])) {
 								
 
-					$datos = array("saberes_comunicacion" => $_POST["copiaSaberesComunicacion"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+					$datos = array("saberes_biotecnologia" => $_POST["copiaSaberesBiotecnologia"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
 
 
-					$respuesta = ModeloInformes::mdlCopiarSaberesComunicacion($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlCopiarSaberesBiotecnologia($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -766,6 +766,163 @@
 
 			}
 		}
+
+
+		/*=============================================
+		COPIAR SABERES FISICA 4 (CIENCIAS NATURALES)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesFisica4($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesFisica4"])) {
+							
+
+				$datos = array("saberes_fisica4" => $_POST["copiaSaberesFisica4"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesFisica4($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
+		/*=============================================
+		COPIAR SABERES PEDAGOGÍA 4 (EDUCACIÓN)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesPedagogia($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesPedagogia"])) {
+							
+
+				$datos = array("saberes_pedagogia" => $_POST["copiaSaberesPedagogia"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesPedagogia($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
+		/*=============================================
+		COPIAR SABERES PSICOLOGÍA 4 (EDUCACIÓN)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesPsicologia($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesPsicologia"])) {
+							
+
+				$datos = array("saberes_psicologia" => $_POST["copiaSaberesPsicologia"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesPsicologia($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
+		/*=============================================
+		COPIAR SABERES SEMINARIO 4 (EDUCACIÓN)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesSeminario4($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesSeminario4"])) {
+							
+
+				$datos = array("saberes_seminario4" => $_POST["copiaSaberesSeminario4"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesSeminario4($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
 
 
 		/*=============================================
@@ -1528,19 +1685,19 @@
 			}
 		}
 
-		/*=============================================
-		EDITAR INFORME COMUNICACION (TURISMO)
-		=============================================*/
+		/*===================================================
+		EDITAR INFORME BIOTECNOLOGÍA (CIENCIAS NATURALES)
+		===================================================*/
 
-		static public function ctrEditarInformeComunicacion($tabla,$curso){
+		static public function ctrEditarInformeBiotecnologia($tabla,$curso){
 
-			if (isset($_POST["saberesComunicacion"])) {
+			if (isset($_POST["saberesBiotecnologia"])) {
 								
 
-					$datos = array("saberes_comunicacion" => $_POST["saberesComunicacion"], "aprecia_comunicacion" => $_POST["apreciaComunicacion"], "asistencia_comunicacion" => $_POST["asistenciaComunicacion"], "observa_comunicacion" => $_POST["observaComunicacion"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+					$datos = array("saberes_biotecnologia" => $_POST["saberesBiotecnologia"], "aprecia_biotecnologia" => $_POST["apreciaBiotecnologia"], "asistencia_biotecnologia" => $_POST["asistenciaBiotecnologia"], "observa_biotecnologia" => $_POST["observaBiotecnologia"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
 
 
-					$respuesta = ModeloInformes::mdlEditarInformeComunicacion($tabla, $curso, $datos);
+					$respuesta = ModeloInformes::mdlEditarInformeBiotecnologia($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {
@@ -1742,6 +1899,164 @@
 
 
 					$respuesta = ModeloInformes::mdlEditarInformeTierra4($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+
+		/*=============================================
+		EDITAR INFORME FISICA 4 (CIENCIAS NATURALES)
+		=============================================*/
+
+		static public function ctrEditarInformeFisica4($tabla,$curso){
+
+			if (isset($_POST["saberesFisica4"])) {
+								
+
+					$datos = array("saberes_fisica4" => $_POST["saberesFisica4"], "aprecia_fisica4" => $_POST["apreciaFisica4"], "asistencia_fisica4" => $_POST["asistenciaFisica4"], "observa_fisica4" => $_POST["observaFisica4"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformeFisica4($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+		/*=============================================
+		EDITAR INFORME PEDAGOGÍA 4 (EDUCACIÓN)
+		=============================================*/
+
+		static public function ctrEditarInformePedagogia($tabla,$curso){
+
+			if (isset($_POST["saberesPedagogia"])) {
+								
+
+					$datos = array("saberes_pedagogia" => $_POST["saberesPedagogia"], "aprecia_pedagogia" => $_POST["apreciaPedagogia"], "asistencia_pedagogia" => $_POST["asistenciaPedagogia"], "observa_pedagogia" => $_POST["observaPedagogia"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformePedagogia($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+
+		/*=============================================
+		EDITAR INFORME PSICOLOGÍA 4 (EDUCACIÓN)
+		=============================================*/
+
+		static public function ctrEditarInformePsicologia($tabla,$curso){
+
+			if (isset($_POST["saberesPsicologia"])) {
+								
+
+					$datos = array("saberes_psicologia" => $_POST["saberesPsicologia"], "aprecia_psicologia" => $_POST["apreciaPsicologia"], "asistencia_psicologia" => $_POST["asistenciaPsicologia"], "observa_psicologia" => $_POST["observaPsicologia"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformePsicologia($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+		/*=============================================
+		EDITAR INFORME SEMINARIO 4 (EDUCACIÓN)
+		=============================================*/
+
+		static public function ctrEditarInformeSeminario4($tabla,$curso){
+
+			if (isset($_POST["saberesSeminario4"])) {
+								
+
+					$datos = array("saberes_seminario4" => $_POST["saberesSeminario4"], "aprecia_seminario4" => $_POST["apreciaSeminario4"], "asistencia_seminario4" => $_POST["asistenciaSeminario4"], "observa_seminario4" => $_POST["observaSeminario4"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformeSeminario4($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {

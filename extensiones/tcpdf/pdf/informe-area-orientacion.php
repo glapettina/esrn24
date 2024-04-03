@@ -93,6 +93,30 @@ class imprimirReporte{
 
 		 }
 
+		 if ($_GET["area"] == "fisica4") {
+
+			$area = "C.O. - FÍSICA AMBIENTAL";
+
+		}
+
+		if ($_GET["area"] == "pedagogia") {
+
+			$area = "C.O. - PEDAGOGÍA";
+
+		}
+
+		if ($_GET["area"] == "psicologia") {
+
+			$area = "C.O. - PSICOLOGÍA DE LA ADOLESCENCIA";
+
+		}
+
+		if ($_GET["area"] == "seminario4") {
+
+			$area = "C.O. - SEMINARIO-TALLER EDUCACIÓN, JUVENTUDES Y PARTICIPACIÓN";
+
+		}
+
 		if ($_GET["area"] == "generacion") {
 
 		 	$area = "C.O. - GENERACION DE EMPRENDIMIENTOS";
@@ -408,6 +432,50 @@ foreach ($respuestaInforme as $key => $value) {
 			$aprecia = $value["aprecia_tierra4"];
 			$asistencia = $value["asistencia_tierra4"];
 			$observa = $value["observa_tierra4"];
+
+		}
+
+		if ($_GET["area"] == "fisica4") {
+
+			$area = "C.O. - FÍSICA AMBIENTAL";
+
+			$saberes = $value["saberes_fisica4"];
+			$aprecia = $value["aprecia_fisica4"];
+			$asistencia = $value["asistencia_fisica4"];
+			$observa = $value["observa_fisica4"];
+
+		}
+
+		if ($_GET["area"] == "pedagogia") {
+
+			$area = "C.O. - PEDAGOGÍA";
+
+			$saberes = $value["saberes_pedagogia"];
+			$aprecia = $value["aprecia_pedagogia"];
+			$asistencia = $value["asistencia_pedagogia"];
+			$observa = $value["observa_pedagogia"];
+
+		}
+
+		if ($_GET["area"] == "psicologia") {
+
+			$area = "C.O. - PSICOLOGÍA DE LA ADOLESCENCIA";
+
+			$saberes = $value["saberes_psicologia"];
+			$aprecia = $value["aprecia_psicologia"];
+			$asistencia = $value["asistencia_psicologia"];
+			$observa = $value["observa_psicologia"];
+
+		}
+
+		if ($_GET["area"] == "seminario4") {
+
+			$area = "C.O. - SEMINARIO-TALLER EDUCACIÓN, JUVENTUDES Y PARTICIPACIÓN";
+
+			$saberes = $value["saberes_seminario4"];
+			$aprecia = $value["aprecia_seminario4"];
+			$asistencia = $value["asistencia_seminario4"];
+			$observa = $value["observa_seminario4"];
 
 		}
 

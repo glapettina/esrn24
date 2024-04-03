@@ -262,7 +262,11 @@
           $_GET["ruta"] == "3-quimica-ciencias-naturales" ||
           $_GET["ruta"] == "3-seminario-educacion" ||
           $_GET["ruta"] == "4-tierra-ciencias-naturales" ||
-          $_GET["ruta"] == "4-generacion-turismo" ||
+          $_GET["ruta"] == "4-fisica-ciencias-naturales" ||
+          $_GET["ruta"] == "4-pedagogia-educacion" ||
+          $_GET["ruta"] == "4-psicologia-educacion" ||
+          $_GET["ruta"] == "4-seminario-educacion" ||
+          $_GET["ruta"] == "5-biotecnologia-ciencias-naturales" ||
           $_GET["ruta"] == "4-produccion-turismo" ||
           $_GET["ruta"] == "5-comunicacion-turismo" ||
           $_GET["ruta"] == "5-proyecto-turismo" ||

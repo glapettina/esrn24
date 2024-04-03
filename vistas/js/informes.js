@@ -590,11 +590,11 @@ $(".tablas").on("click", ".btnEditarInformeProduccion", function(){
 	
 })
 
-/*=============================================
-EDITAR INFORME COMUNICACION (TURISMO)
-=============================================*/
+/*===================================================
+EDITAR INFORME BIOTECNOLOGÍA (CIENCIAS NATURALES)
+===================================================*/
 
-$(".tablas").on("click", ".btnEditarInformeComunicacion", function(){
+$(".tablas").on("click", ".btnEditarInformeBiotecnologia", function(){
 
 
 	var idAlumno = $(this).attr("idAlumno");
@@ -625,10 +625,10 @@ $(".tablas").on("click", ".btnEditarInformeComunicacion", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesComunicacion").val(respuesta["saberes_comunicacion"]);
-			$("#apreciaComunicacion").val(respuesta["aprecia_comunicacion"]);
-			$("#asistenciaComunicacion").val(respuesta["asistencia_comunicacion"]);
-			$("#observaComunicacion").val(respuesta["observa_comunicacion"]);			
+			$("#saberesBiotecnologia").val(respuesta["saberes_biotecnologia"]);
+			$("#apreciaBiotecnologia").val(respuesta["aprecia_biotecnologia"]);
+			$("#asistenciaBiotecnologia").val(respuesta["asistencia_biotecnologia"]);
+			$("#observaBiotecnologia").val(respuesta["observa_biotecnologia"]);			
 
 
 								
@@ -875,6 +875,200 @@ $(".tablas").on("click", ".btnEditarInformeTierra4", function(){
 			$("#apreciaTierra4").val(respuesta["aprecia_tierra4"]);
 			$("#asistenciaTierra4").val(respuesta["asistencia_tierra4"]);
 			$("#observaTierra4").val(respuesta["observa_tierra4"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+
+/*=============================================
+EDITAR INFORME FISICA 4 (CIENCIAS NATURALES)
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeFisica4", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesFisica4").val(respuesta["saberes_fisica4"]);
+			$("#apreciaFisica4").val(respuesta["aprecia_fisica4"]);
+			$("#asistenciaFisica4").val(respuesta["asistencia_fisica4"]);
+			$("#observaFisica4").val(respuesta["observa_fisica4"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME PEDAGOGÍA (EDUCACIÓN)
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformePedagogia", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesPedagogia").val(respuesta["saberes_pedagogia"]);
+			$("#apreciaPedagogia").val(respuesta["aprecia_pedagogia"]);
+			$("#asistenciaPedagogia").val(respuesta["asistencia_pedagogia"]);
+			$("#observaPedagogia").val(respuesta["observa_pedagogia"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+
+/*=============================================
+EDITAR INFORME PSICOLOGÍA (EDUCACIÓN)
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformePsicologia", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesPsicologia").val(respuesta["saberes_psicologia"]);
+			$("#apreciaPsicologia").val(respuesta["aprecia_psicologia"]);
+			$("#asistenciaPsicologia").val(respuesta["asistencia_psicologia"]);
+			$("#observaPsicologia").val(respuesta["observa_psicologia"]);			
+
+
+								
+		}
+	})
+
+	
+})
+
+/*=============================================
+EDITAR INFORME SEMINARIO 4 (EDUCACIÓN)
+=============================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSeminario4", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSeminario4").val(respuesta["saberes_seminario4"]);
+			$("#apreciaSeminario4").val(respuesta["aprecia_seminario4"]);
+			$("#asistenciaSeminario4").val(respuesta["asistencia_seminario4"]);
+			$("#observaSeminario4").val(respuesta["observa_seminario4"]);			
 
 
 								

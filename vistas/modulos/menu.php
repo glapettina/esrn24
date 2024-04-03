@@ -442,7 +442,7 @@
                                           </a>
                                     </li>
                                     <li>
-                                          <a href="4-fisica-ambiental">
+                                          <a href="4-fisica-ciencias-naturales">
                                           <i class="fa fa-check-circle-o"></i>
                                               Física Ambiental                          
                                           </a>
@@ -461,7 +461,7 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                       <li>
-                                          <a href="5-biotecnologia">
+                                          <a href="5-biotecnologia-ciencias-naturales">
                                           <i class="fa fa-check-circle-o"></i>
                                               Biotecnología                          
                                           </a>
@@ -530,19 +530,19 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                     <li>
-                                          <a href="4-pedagogia">
+                                          <a href="4-pedagogia-educacion">
                                           <i class="fa fa-check-circle-o"></i>
                                               Pedagogía                          
                                           </a>
                                     </li>
                                     <li>
-                                          <a href="4-psicologia">
+                                          <a href="4-psicologia-educacion">
                                           <i class="fa fa-check-circle-o"></i>
                                               Psicología Adolescencia                          
                                           </a>
                                     </li>
                                     <li>
-                                          <a href="4-taller-educacion">
+                                          <a href="4-seminario-educacion">
                                           <i class="fa fa-check-circle-o"></i>
                                               Taller Educ. Juv y Part.                          
                                           </a>
