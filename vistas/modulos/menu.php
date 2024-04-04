@@ -467,13 +467,13 @@
                                           </a>
                                       </li>
                                      <li>
-                                          <a href="5-ciencia-tecnologia">
+                                          <a href="5-ciencia-ciencias-naturales">
                                           <i class="fa fa-check-circle-o"></i>
                                               Cs. Tec. Soc. Amb. y Valores                         
                                           </a>
                                      </li>
                                      <li>
-                                          <a href="5-ciencia-tierra2">
+                                          <a href="5-tierra-ciencias-naturales">
                                           <i class="fa fa-check-circle-o"></i>
                                               Ciencias de la Tierra II                          
                                           </a>

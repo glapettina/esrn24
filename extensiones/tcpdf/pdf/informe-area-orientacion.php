@@ -117,22 +117,22 @@ class imprimirReporte{
 
 		}
 
-		if ($_GET["area"] == "generacion") {
+		if ($_GET["area"] == "biotecnologia") {
 
-		 	$area = "C.O. - GENERACION DE EMPRENDIMIENTOS";
-
-		 }
-
-
-		if ($_GET["area"] == "produccion") {
-
-		 	$area = "C.O. - PRODUCCION DE SERVICIOS TURISTICOS";
+		 	$area = "C.O. - BIOTECNOLOGÍA";
 
 		 }
 
-		if ($_GET["area"] == "comunicacion") {
 
-		 	$area = "C.O. - COMUNICACION Y TURISMO";
+		if ($_GET["area"] == "ciencia") {
+
+		 	$area = "C.O. - CIENCIA, TECNOLOGÍA, SOCIEDAD, AMBIENTE Y VALORES";
+
+		 }
+
+		if ($_GET["area"] == "tierra5") {
+
+		 	$area = "C.O. - CIENCIAS DE LA TIERRA II";
 
 		 }
 
@@ -479,37 +479,37 @@ foreach ($respuestaInforme as $key => $value) {
 
 		}
 
-		if ($_GET["area"] == "generacion") {
+		if ($_GET["area"] == "biotecnologia") {
 
-			$area = "C.O. - GENERACION DE EMPRENDIMIENTOS";
+			$area = "C.O. - BIOTECNOLOGÍA";
 
-			$saberes = $value["saberes_generacion"];
-			$aprecia = $value["aprecia_generacion"];
-			$asistencia = $value["asistencia_generacion"];
-			$observa = $value["observa_generacion"];
-
-		}
-
-
-		if ($_GET["area"] == "produccion") {
-
-			$area = "C.O. - PRODUCCION DE SERVICIOS TURISTICOS";
-
-			$saberes = $value["saberes_produccion"];
-			$aprecia = $value["aprecia_produccion"];
-			$asistencia = $value["asistencia_produccion"];
-			$observa = $value["observa_produccion"];
+			$saberes = $value["saberes_biotecnologia"];
+			$aprecia = $value["aprecia_biotecnologia"];
+			$asistencia = $value["asistencia_biotecnologia"];
+			$observa = $value["observa_biotecnologia"];
 
 		}
 
-		if ($_GET["area"] == "comunicacion") {
 
-			$area = "C.O. - COMUNICACION Y TURISMO";
+		if ($_GET["area"] == "ciencia") {
 
-			$saberes = $value["saberes_comunicacion"];
-			$aprecia = $value["aprecia_comunicacion"];
-			$asistencia = $value["asistencia_comunicacion"];
-			$observa = $value["observa_comunicacion"];
+			$area = "C.O. - CIENCIA, TECNOLOGÍA, SOCIEDAD, AMBIENTE Y VALORES";
+
+			$saberes = $value["saberes_ciencia"];
+			$aprecia = $value["aprecia_ciencia"];
+			$asistencia = $value["asistencia_ciencia"];
+			$observa = $value["observa_ciencia"];
+
+		}
+
+		if ($_GET["area"] == "tierra5") {
+
+			$area = "C.O. - CIENCIAS DE LA TIERRA II";
+
+			$saberes = $value["saberes_tierra5"];
+			$aprecia = $value["aprecia_tierra5"];
+			$asistencia = $value["asistencia_tierra5"];
+			$observa = $value["observa_tierra5"];
 
 		}
 

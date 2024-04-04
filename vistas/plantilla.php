@@ -267,6 +267,8 @@
           $_GET["ruta"] == "4-psicologia-educacion" ||
           $_GET["ruta"] == "4-seminario-educacion" ||
           $_GET["ruta"] == "5-biotecnologia-ciencias-naturales" ||
+          $_GET["ruta"] == "5-ciencia-ciencias-naturales" ||
+          $_GET["ruta"] == "5-tierra-ciencias-naturales" ||
           $_GET["ruta"] == "4-produccion-turismo" ||
           $_GET["ruta"] == "5-comunicacion-turismo" ||
           $_GET["ruta"] == "5-proyecto-turismo" ||

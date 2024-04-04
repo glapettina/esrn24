@@ -565,6 +565,85 @@
 			}
 		}
 
+		/*=============================================
+		COPIAR SABERES CIENCIA (CIENCIAS NATURALES)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesCiencia($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesCiencia"])) {
+							
+
+				$datos = array("saberes_ciencia" => $_POST["copiaSaberesCiencia"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesCiencia($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
+
+		/*=============================================
+		COPIAR SABERES TIERRA 5 (CIENCIAS NATURALES)           
+		=============================================*/	
+
+		static public function ctrCopiarSaberesTierra5($tabla, $curso, $ncurso1, $ncurso2, $ncurso3, $ncurso4){
+
+			if (isset($_POST["copiaSaberesTierra5"])) {
+							
+
+				$datos = array("saberes_tierra5" => $_POST["copiaSaberesTierra5"], "id_curso1" => $ncurso1, "id_curso2" => $ncurso2, "id_curso3" => $ncurso3, "id_curso4" => $ncurso4);
+
+
+				$respuesta = ModeloInformes::mdlCopiarSaberesTierra5($tabla, $curso, $datos);
+
+
+				if ($respuesta == "ok") {
+					
+					echo '<script>
+
+					swal({
+						type: "success",
+						title: "Los saberes fueron copiados correctamente",
+						showConfirmButton: true,
+						confirmButtonText: "Cerrar",
+						closeOnConfirm: false
+						}).then((result)=>{
+							if(result.value){
+
+								window.location = "'.$curso.'";										
+							}
+						})
+
+				</script>';
+
+				}
+
+		}
+	}
+
 
 
 		/*=============================================
@@ -1698,6 +1777,86 @@
 
 
 					$respuesta = ModeloInformes::mdlEditarInformeBiotecnologia($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+
+		/*===================================================
+		EDITAR INFORME CIENCIA (CIENCIAS NATURALES)
+		===================================================*/
+
+		static public function ctrEditarInformeCiencia($tabla,$curso){
+
+			if (isset($_POST["saberesCiencia"])) {
+								
+
+					$datos = array("saberes_ciencia" => $_POST["saberesCiencia"], "aprecia_ciencia" => $_POST["apreciaCiencia"], "asistencia_ciencia" => $_POST["asistenciaCiencia"], "observa_ciencia" => $_POST["observaCiencia"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformeCiencia($tabla, $curso, $datos);
+
+
+					if ($respuesta == "ok") {
+						
+						echo '<script>
+
+						swal({
+							type: "success",
+							title: "El informe ha sido modificado correctamente",
+							showConfirmButton: true,
+							confirmButtonText: "Cerrar",
+							closeOnConfirm: false
+							}).then((result)=>{
+								if(result.value){
+
+									window.location = "'.$curso.'";										
+								}
+							})
+
+					</script>';
+
+					}
+
+			}
+		}
+
+
+		/*===================================================
+		EDITAR INFORME TIERRA 5 (CIENCIAS NATURALES)
+		===================================================*/
+
+		static public function ctrEditarInformeTierra5($tabla,$curso){
+
+			if (isset($_POST["saberesTierra5"])) {
+								
+
+					$datos = array("saberes_tierra5" => $_POST["saberesTierra5"], "aprecia_tierra5" => $_POST["apreciaTierra5"], "asistencia_tierra5" => $_POST["asistenciaTierra5"], "observa_tierra5" => $_POST["observaTierra5"], "id_usuario" => $_SESSION["id"], "id" => $_POST["idAlumno"]);
+
+
+					$respuesta = ModeloInformes::mdlEditarInformeTierra5($tabla, $curso, $datos);
 
 
 					if ($respuesta == "ok") {

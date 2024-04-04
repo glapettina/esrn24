@@ -493,6 +493,68 @@
 		}
 
 
+		/*===================================================
+		COPIAR SABERES CIENCIA (CIENCIAS NATURALES)           
+		===================================================*/
+
+		static public function mdlCopiarSaberesCiencia($tabla, $curso, $datos){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_ciencia = :saberes_ciencia WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
+
+			$stmt->bindParam(":saberes_ciencia", $datos["saberes_ciencia"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+
+		/*===================================================
+		COPIAR SABERES TIERRA 5 (CIENCIAS NATURALES)           
+		===================================================*/
+
+		static public function mdlCopiarSaberesTierra5($tabla, $curso, $datos){
+
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tierra5 = :saberes_tierra5 WHERE id_curso >= :id_curso1 OR id_curso <= :id_curso2 OR id_curso <= :id_curso3 OR id_curso <= :id_curso4");
+
+			$stmt->bindParam(":saberes_tierra5", $datos["saberes_tierra5"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_curso1", $datos["id_curso1"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso2", $datos["id_curso2"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso3", $datos["id_curso3"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_curso4", $datos["id_curso4"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+
+		}
+
+
 		/*=============================================
 		COPIAR SABERES PROYECTO (TURISMO)           
 		=============================================*/
@@ -1351,6 +1413,65 @@
 			$stmt->bindParam(":aprecia_biotecnologia", $datos["aprecia_biotecnologia"], PDO::PARAM_STR);
 			$stmt->bindParam(":asistencia_biotecnologia", $datos["asistencia_biotecnologia"], PDO::PARAM_STR);
 			$stmt->bindParam(":observa_biotecnologia", $datos["observa_biotecnologia"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+		/*===================================================
+		EDITAR INFORME CIENCIA (CIENCIAS NATURALES)           
+		===================================================*/
+
+		static public function mdlEditarInformeCiencia($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_ciencia = :saberes_ciencia, aprecia_ciencia = :aprecia_ciencia, asistencia_ciencia = :asistencia_ciencia, observa_ciencia = :observa_ciencia, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_ciencia", $datos["saberes_ciencia"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_ciencia", $datos["aprecia_ciencia"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_ciencia", $datos["asistencia_ciencia"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_ciencia", $datos["observa_ciencia"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+
+		/*===================================================
+		EDITAR INFORME TIERRA 5 (CIENCIAS NATURALES)           
+		===================================================*/
+
+		static public function mdlEditarInformeTierra5($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_tierra5 = :saberes_tierra5, aprecia_tierra5 = :aprecia_tierra5, asistencia_tierra5 = :asistencia_tierra5, observa_tierra5 = :observa_tierra5, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_tierra5", $datos["saberes_tierra5"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_tierra5", $datos["aprecia_tierra5"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_tierra5", $datos["asistencia_tierra5"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_tierra5", $datos["observa_tierra5"], PDO::PARAM_STR);
 			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
 
 

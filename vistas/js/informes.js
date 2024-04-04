@@ -638,6 +638,100 @@ $(".tablas").on("click", ".btnEditarInformeBiotecnologia", function(){
 	
 })
 
+
+/*===================================================
+EDITAR INFORME CIENCIA (CIENCIAS NATURALES)
+===================================================*/
+
+$(".tablas").on("click", ".btnEditarInformeCiencia", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesCiencia").val(respuesta["saberes_ciencia"]);
+			$("#apreciaCiencia").val(respuesta["aprecia_ciencia"]);
+			$("#asistenciaCiencia").val(respuesta["asistencia_ciencia"]);
+			$("#observaCiencia").val(respuesta["observa_ciencia"]);			
+								
+		}
+	})
+
+	
+})
+
+
+/*===================================================
+EDITAR INFORME TIERRA 5 (CIENCIAS NATURALES)
+===================================================*/
+
+$(".tablas").on("click", ".btnEditarInformeTierra5", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesTierra5").val(respuesta["saberes_tierra5"]);
+			$("#apreciaTierra5").val(respuesta["aprecia_tierra5"]);
+			$("#asistenciaTierra5").val(respuesta["asistencia_tierra5"]);
+			$("#observaTierra5").val(respuesta["observa_tierra5"]);			
+								
+		}
+	})
+
+	
+})
+
 /*=============================================
 EDITAR INFORME PROYECTO (TURISMO)
 =============================================*/
