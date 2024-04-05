@@ -42,14 +42,14 @@ class imprimirReporte{
 		}
 
 
-		if ($_GET["modalidad"] == "Turismo") {
+		if ($_GET["modalidad"] == "Ciencias Naturales") {
 			
-			$modalidad = "Turismo";
+			$modalidad = "Ciencias Naturales";
 		}
 
-		if ($_GET["modalidad"] == "Arte-Música") {
+		if ($_GET["modalidad"] == "Educación") {
 			
-			$modalidad = "Arte - Música";
+			$modalidad = "Educación";
 		}
 
 
@@ -360,7 +360,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
@@ -876,7 +876,7 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 //--------------------------------------------------------
 
 
-if ($modalidad == "Turismo") {
+if ($modalidad == "Ciencias Naturales") {
 
 	//----------------------------------------------------------------------------------
 
@@ -895,7 +895,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				C.O. - COMUNICACION Y TURISMO
+				C.O. - BIOTECNOLOGÍA
 
 
 			</td>
@@ -906,7 +906,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_comunicacion]
+				$respuestaInforme[saberes_biotecnologia]
 
 			</td>
 
@@ -914,7 +914,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_comunicacion]
+				$respuestaInforme[aprecia_biotecnologia]
 
 
 			</td>
@@ -923,7 +923,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_comunicacion]
+				$respuestaInforme[asistencia_biotecnologia]
 
 			</td>	
 
@@ -931,7 +931,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_comunicacion]
+				$respuestaInforme[observa_biotecnologia]
 
 			</td>	
 
@@ -965,7 +965,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				C.O. - PROYECTO DE INTERVENCION SOCIOCOMUNITARIA 
+				C.O. - CIENCIA, TECNOLOGÍA, SOCIEDAD, AMBIENTE Y VALORES
 
 
 			</td>
@@ -976,7 +976,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_proyecto]
+				$respuestaInforme[saberes_ciencia]
 
 			</td>
 
@@ -984,7 +984,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_proyecto]
+				$respuestaInforme[aprecia_ciencia]
 
 
 			</td>
@@ -993,7 +993,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_proyecto]
+				$respuestaInforme[asistencia_ciencia]
 
 			</td>	
 
@@ -1001,7 +1001,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_proyecto]
+				$respuestaInforme[observa_ciencia]
 
 			</td>	
 
@@ -1035,7 +1035,361 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				C.O. - TALLER DE TECNICAS INTERPRETATIVAS Y DE ANIMACION SOCIOCULTURAL 
+				C.O. - CIENCIAS DE LA TIERRA II 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_tierra5]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_tierra5]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_tierra5]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_tierra5]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque15, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+	
+}else{
+
+	//----------------------------------------------------------------------------------
+
+
+$bloque13 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - HISTORIA SOCIAL Y POLÍTICA DE LA EDUCACIÓN
+
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_historia]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_historia]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_historia]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_historia]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque13, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque14 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - PENSAMIENTO PEDAGÓGICO ARGENTINO Y LATINOAMERICANO 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_pensamiento]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_pensamiento]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_pensamiento]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_pensamiento]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque14, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque15 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - SOCIEDAD, CULTURA Y JUVENTUDES
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_sociedad]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_sociedad]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_sociedad]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_sociedad]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque15, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque16 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - SOCIOLOGÍA DE LAS ORGANIZACIONES 
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_sociologia]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_sociologia]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_sociologia]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_sociologia]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque16, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+//----------------------------------------------------------------------------------
+
+
+$bloque17 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				C.O. - TALLER DE PRODUCCIÓN DE PROYECTOS SOCIO-EDUCATIVOS
 
 
 			</td>
@@ -1084,360 +1438,6 @@ $bloque15 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque15, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-	
-}else{
-
-	//----------------------------------------------------------------------------------
-
-
-$bloque13 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL
-
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_lenguaje5]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_lenguaje5]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_lenguaje5]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_lenguaje5]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque13, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-//----------------------------------------------------------------------------------
-
-
-$bloque14 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - MUSICA Y CONTEXTO HISTORICO SOCIAL 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_musica]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_musica]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_musica]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_musica]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque14, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-//----------------------------------------------------------------------------------
-
-
-$bloque15 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - PRACTICA VOCAL 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_vocal5]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_vocal5]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_vocal5]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_vocal5]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque15, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-//----------------------------------------------------------------------------------
-
-
-$bloque16 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - TECNOLOGIA E INFORMATICA APLICADA A LA PRODUCCION MUSICAL 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_tecnologia]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_tecnologia]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_tecnologia]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_tecnologia]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque16, false, false, false, false, '');
-
-//--------------------------------------------------------
-
-//----------------------------------------------------------------------------------
-
-
-$bloque17 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - PRACTICA DE CONJUNTO
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_conjunto5]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_conjunto5]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_conjunto5]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_conjunto5]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
 $pdf->writeHTML($bloque17, false, false, false, false, '');
 
 //--------------------------------------------------------
@@ -1448,27 +1448,7 @@ $pdf->writeHTML($bloque17, false, false, false, false, '');
 
 //--------------------------------------------------------------------------------
 
-$bloque18 = <<<EOF
 
-	<table>
-
-		<tr>
-			<br>
-
-			<td style="width: 780px"><img src="images/footer2.png"></td>
-
-			
-		</tr>
-		
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque18, false, false, false, false, '');
-
-//----------------------------------------------------------------------------------
 
 
 //SALIDA DEL ARCHIVO

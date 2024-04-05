@@ -42,14 +42,14 @@ class imprimirReporte{
 		}
 
 
-		if ($_GET["modalidad"] == "Turismo") {
+		if ($_GET["modalidad"] == "Ciencias Naturales") {
 			
-			$modalidad = "Turismo";
+			$modalidad = "Ciencias Naturales";
 		}
 
-		if ($_GET["modalidad"] == "Arte-Música") {
+		if ($_GET["modalidad"] == "Educación") {
 			
-			$modalidad = "Arte - Música";
+			$modalidad = "Educación";
 		}
 
 
@@ -361,7 +361,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
@@ -877,7 +877,7 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 //--------------------------------------------------------
 
 
-if ($modalidad == "Turismo") {
+if ($modalidad == "Ciencias Naturales") {
 
 	//----------------------------------------------------------------------------------
 
@@ -896,7 +896,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				C.O. - DESARROLLO SUSTENTABLE DEL TURISMO
+				C.O. - QUÍMICA AMBIENTAL
 
 
 			</td>
@@ -907,7 +907,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_desarrollo]
+				$respuestaInforme[saberes_quimica]
 
 			</td>
 
@@ -915,7 +915,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_desarrollo]
+				$respuestaInforme[aprecia_quimica]
 
 
 			</td>
@@ -924,7 +924,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_desarrollo]
+				$respuestaInforme[asistencia_quimica]
 
 			</td>	
 
@@ -932,7 +932,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_desarrollo]
+				$respuestaInforme[observa_quimica]
 
 			</td>	
 
@@ -949,73 +949,6 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
-
-
-$bloque14 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - INTRODUCCION AL TURISMO 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_introduccion]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_introduccion]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_introduccion]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_introduccion]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque14, false, false, false, false, '');
 
 //--------------------------------------------------------
 
@@ -1039,7 +972,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				C.O. - APRECIACION MUSICAL
+				C.O. - SEMINARIO-TALLER EDUCACIÓN, CULTURA Y SUBJETIVIDADES
 
 
 			</td>
@@ -1050,7 +983,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_apreciacion]
+				$respuestaInforme[saberes_seminario3]
 
 			</td>
 
@@ -1058,7 +991,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_apreciacion]
+				$respuestaInforme[aprecia_seminario3]
 
 
 			</td>
@@ -1067,7 +1000,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_apreciacion]
+				$respuestaInforme[asistencia_seminario3]
 
 			</td>	
 
@@ -1075,7 +1008,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_apreciacion]
+				$respuestaInforme[observa_seminario3]
 
 			</td>	
 
@@ -1092,101 +1025,11 @@ $pdf->writeHTML($bloque13, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
-
-
-$bloque14 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL 
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_lenguaje3]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_lenguaje3]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_lenguaje3]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_lenguaje3]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque14, false, false, false, false, '');
-
-//--------------------------------------------------------
 
 
 }
 
 
-//--------------------------------------------------------------------------------
-
-$bloque15 = <<<EOF
-
-	<table>
-
-		<tr>
-			<br>
-
-			<td style="width: 780px"><img src="images/footer2.png"></td>
-
-			
-		</tr>
-		
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque15, false, false, false, false, '');
 
 //----------------------------------------------------------------------------------
 

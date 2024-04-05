@@ -42,14 +42,14 @@ class imprimirReporte{
 		}
 
 
-		if ($_GET["modalidad"] == "Turismo") {
+		if ($_GET["modalidad"] == "Ciencias Naturales") {
 			
-			$modalidad = "Turismo";
+			$modalidad = "Ciencias Naturales";
 		}
 
-		if ($_GET["modalidad"] == "Arte-Música") {
+		if ($_GET["modalidad"] == "Educación") {
 			
-			$modalidad = "Arte - Música";
+			$modalidad = "Educación";
 		}
 
 
@@ -361,7 +361,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
@@ -877,7 +877,7 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 //--------------------------------------------------------
 
 
-if ($modalidad == "Turismo") {
+if ($modalidad == "Ciencias Naturales") {
 
 	//----------------------------------------------------------------------------------
 
@@ -896,7 +896,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				C.O. - AMBIENTE Y PATRIMONIO
+				C.O. - CIENCIAS DE LA TIERRA I
 
 
 			</td>
@@ -907,7 +907,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_ambiente]
+				$respuestaInforme[saberes_tierra4]
 
 			</td>
 
@@ -915,7 +915,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_ambiente]
+				$respuestaInforme[aprecia_tierra4]
 
 
 			</td>
@@ -924,7 +924,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_ambiente]
+				$respuestaInforme[asistencia_tierra4]
 
 			</td>	
 
@@ -932,7 +932,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_ambiente]
+				$respuestaInforme[observa_tierra4]
 
 			</td>	
 
@@ -966,7 +966,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				C.O. - GENERACION DE EMPRENDIMIENTOS
+				C.O. - FÍSICA AMBIENTAL
 
 
 			</td>
@@ -977,7 +977,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_generacion]
+				$respuestaInforme[saberes_fisica4]
 
 			</td>
 
@@ -985,7 +985,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_generacion]
+				$respuestaInforme[aprecia_fisica4]
 
 
 			</td>
@@ -994,7 +994,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_generacion]
+				$respuestaInforme[asistencia_fisica4]
 
 			</td>	
 
@@ -1002,7 +1002,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_generacion]
+				$respuestaInforme[observa_fisica4]
 
 			</td>	
 
@@ -1019,75 +1019,6 @@ $pdf->writeHTML($bloque14, false, false, false, false, '');
 
 //----------------------------------------------------------------------------------
 
-//----------------------------------------------------------------------------------
-
-
-$bloque15 = <<<EOF
-
-	<table style="font-size:10px; padding:5px 10px;">
-
-	
-
-		
-
-		<tr>
-
-			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
-
-				<br>
-
-				C.O. - PRODUCCION DE SERVICIOS TURISTICOS
-
-
-			</td>
-
-
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
-
-				<br>
-
-				$respuestaInforme[saberes_produccion]
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
-
-				<br>
-
-				$respuestaInforme[aprecia_produccion]
-
-
-			</td>
-
-			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
-
-				<br>
-
-				$respuestaInforme[asistencia_produccion]
-
-			</td>	
-
-			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
-
-				<br>
-
-				$respuestaInforme[observa_produccion]
-
-			</td>	
-
-
-
-		</tr>
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque15, false, false, false, false, '');
-
-//--------------------------------------------------------
 
 	
 }else{
@@ -1109,7 +1040,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL
+				C.O. - PEDAGOGÍA
 
 
 			</td>
@@ -1120,7 +1051,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_lenguaje4]
+				$respuestaInforme[saberes_pedagogia]
 
 			</td>
 
@@ -1128,7 +1059,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_lenguaje4]
+				$respuestaInforme[aprecia_pedagogia]
 
 
 			</td>
@@ -1137,7 +1068,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_lenguaje4]
+				$respuestaInforme[asistencia_pedagogia]
 
 			</td>	
 
@@ -1145,7 +1076,7 @@ $bloque13 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_lenguaje4]
+				$respuestaInforme[observa_pedagogia]
 
 			</td>	
 
@@ -1179,7 +1110,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				C.O. - PRACTICA DE CONJUNTO 
+				C.O. - PSICOLOGÍA DE LA ADOLESCENCIA 
 
 
 			</td>
@@ -1190,7 +1121,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_conjunto4]
+				$respuestaInforme[saberes_psicologia]
 
 			</td>
 
@@ -1198,7 +1129,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_conjunto4]
+				$respuestaInforme[aprecia_psicologia]
 
 
 			</td>
@@ -1207,7 +1138,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_conjunto4]
+				$respuestaInforme[asistencia_psicologia]
 
 			</td>	
 
@@ -1215,7 +1146,7 @@ $bloque14 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_conjunto4]
+				$respuestaInforme[observa_psicologia]
 
 			</td>	
 
@@ -1249,7 +1180,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				C.O. - PRACTICA VOCAL 
+				C.O. - SEMINARIO-TALLER EDUCACIÓN, JUVENTUDES Y PARTICIPACIÓN 
 
 
 			</td>
@@ -1260,7 +1191,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[saberes_vocal4]
+				$respuestaInforme[saberes_seminario4]
 
 			</td>
 
@@ -1268,7 +1199,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[aprecia_vocal4]
+				$respuestaInforme[aprecia_seminario4]
 
 
 			</td>
@@ -1277,7 +1208,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[asistencia_vocal4]
+				$respuestaInforme[asistencia_seminario4]
 
 			</td>	
 
@@ -1285,7 +1216,7 @@ $bloque15 = <<<EOF
 
 				<br>
 
-				$respuestaInforme[observa_vocal4]
+				$respuestaInforme[observa_seminario4]
 
 			</td>	
 
@@ -1309,27 +1240,6 @@ $pdf->writeHTML($bloque15, false, false, false, false, '');
 
 //--------------------------------------------------------------------------------
 
-$bloque16 = <<<EOF
-
-	<table>
-
-		<tr>
-			<br>
-
-			<td style="width: 780px"><img src="images/footer2.png"></td>
-
-			
-		</tr>
-		
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque16, false, false, false, false, '');
-
-//----------------------------------------------------------------------------------
 
 //SALIDA DEL ARCHIVO
 

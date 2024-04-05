@@ -320,7 +320,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 
@@ -835,29 +835,7 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//--------------------------------------------------------------------------------
 
-$bloque13 = <<<EOF
-
-	<table>
-
-		<tr>
-			<br>
-
-			<td style="width: 780px"><img src="images/footer2.png"></td>
-
-			
-		</tr>
-		
-
-	</table>
-
-EOF;
-
-
-$pdf->writeHTML($bloque13, false, false, false, false, '');
-
-//----------------------------------------------------------------------------------
 
 //SALIDA DEL ARCHIVO
 
