@@ -237,7 +237,7 @@
 
 
               <div class="form-group">          
-                  <label for="observaCiencia">Observaciones</label>
+                  <label for="observaTierra5">Observaciones</label>
                       <textarea class="form-control" cols="80" rows="3" id="observaTierra5" name="observaTierra5">
                   </textarea>
               </div>

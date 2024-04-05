@@ -137,77 +137,36 @@ class imprimirReporte{
 		 }
 
 
-		if ($_GET["area"] == "proyecto") {
+		if ($_GET["area"] == "historia") {
 
-		 	$area = "C.O. - PROYECTO DE INTERVENCION SOCIOCOMUNITARIA";
-
-		 }
-
-		if ($_GET["area"] == "taller") {
-
-		 	$area = "C.O. - TALLER DE TECNICAS INTERPRETATIVAS Y DE ANIMACION SOCIOCULTURAL";
+		 	$area = "C.O. - HISTORIA SOCIAL Y POLITICA DE LA EDUCACIÓN";
 
 		 }
 
-		 if ($_GET["area"] == "apreciacion") {
+		if ($_GET["area"] == "pensamiento") {
 
-		 	$area = "C.O. - APRECIACION MUSICAL";
-
-		 }
-
-		 if ($_GET["area"] == "lenguaje3") {
-
-		 	$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
+		 	$area = "C.O. - PENSAMIENTO PEDAGÓGICO ARGENTINO Y LATINOAMERICANO";
 
 		 }
 
-		 if ($_GET["area"] == "lenguaje4") {
+		 if ($_GET["area"] == "sociedad") {
 
-		 	$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-		 }
-
-		 if ($_GET["area"] == "conjunto4") {
-
-		 	$area = "C.O. - PRACTICA DE CONJUNTO";
+		 	$area = "C.O. - SOCIEDAD, CULTURA Y JUVENTUDES";
 
 		 }
 
-		 if ($_GET["area"] == "vocal4") {
+		 if ($_GET["area"] == "sociologia") {
 
-		 	$area = "C.O. - PRACTICA VOCAL";
-
-		 }
-
-		if ($_GET["area"] == "lenguaje5") {
-
-		 	$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
+		 	$area = "C.O. - SOCIOLOGÍA DE LAS ORGANIZACIONES";
 
 		 }
 
-		if ($_GET["area"] == "musica") {
+		 if ($_GET["area"] == "taller") {
 
-		 	$area = "C.O. - MUSICA Y CONTEXTO HISTORICO SOCIAL";
-
-		 }
-
-		if ($_GET["area"] == "vocal5") {
-
-		 	$area = "C.O. - PRACTICA VOCAL";
+		 	$area = "C.O. - TALLER DE PRODUCCIÓN DE PROYECTOS SOCIO-EDUCATIVOS";
 
 		 }
 
-		if ($_GET["area"] == "tecnologia") {
-
-		 	$area = "C.O. - TECNOLOGIA E INFORMATICA APLICADA A LA PRODUCCION MUSICAL";
-
-		 }
-
-		if ($_GET["area"] == "conjunto5") {
-
-		 	$area = "C.O. - PRACTICA DE CONJUNTO";
-
-		 }
 
 	
 
@@ -514,20 +473,53 @@ foreach ($respuestaInforme as $key => $value) {
 		}
 
 
-		if ($_GET["area"] == "proyecto") {
+		if ($_GET["area"] == "historia") {
 
-			$area = "C.O. - PROYECTO DE INTERVENCION SOCIOCOMUNITARIA";
+			$area = "C.O. - HISTORIA SOCIAL Y POLITICA DE LA EDUCACIÓN";
 
-			$saberes = $value["saberes_proyecto"];
-			$aprecia = $value["aprecia_proyecto"];
-			$asistencia = $value["asistencia_proyecto"];
-			$observa = $value["observa_proyecto"];
+			$saberes = $value["saberes_historia"];
+			$aprecia = $value["aprecia_historia"];
+			$asistencia = $value["asistencia_historia"];
+			$observa = $value["observa_historia"];
+
+		}
+
+		if ($_GET["area"] == "pensamiento") {
+
+			$area = "C.O. - PENSAMIENTO PEDAGÓGICO ARGENTINO Y LATINOAMERICANO";
+
+			$saberes = $value["saberes_pensamiento"];
+			$aprecia = $value["aprecia_pensamiento"];
+			$asistencia = $value["asistencia_pensamiento"];
+			$observa = $value["observa_pensamiento"];
+
+		}
+
+		if ($_GET["area"] == "sociedad") {
+
+			$area = "C.O. - SOCIEDAD, CULTURA Y JUVENTUDES";
+
+			$saberes = $value["saberes_sociedad"];
+			$aprecia = $value["aprecia_sociedad"];
+			$asistencia = $value["asistencia_sociedad"];
+			$observa = $value["observa_sociedad"];
+
+		}
+
+		if ($_GET["area"] == "sociologia") {
+
+			$area = "C.O. - SOCIOLOGÍA DE LAS ORGANIZACIONES";
+
+			$saberes = $value["saberes_sociologia"];
+			$aprecia = $value["aprecia_sociologia"];
+			$asistencia = $value["asistencia_sociologia"];
+			$observa = $value["observa_sociologia"];
 
 		}
 
 		if ($_GET["area"] == "taller") {
 
-			$area = "C.O. - TALLER DE TECNICAS INTERPRETATIVAS Y DE ANIMACION SOCIOCULTURAL";
+			$area = "C.O. - TALLER DE PRODUCCIÓN DE PROYECTOS SOCIO-EDUCATIVOS";
 
 			$saberes = $value["saberes_taller"];
 			$aprecia = $value["aprecia_taller"];
@@ -536,117 +528,6 @@ foreach ($respuestaInforme as $key => $value) {
 
 		}
 
-		if ($_GET["area"] == "apreciacion") {
-
-			$area = "C.O. - APRECIACION MUSICAL";
-
-			$saberes = $value["saberes_apreciacion"];
-			$aprecia = $value["aprecia_apreciacion"];
-			$asistencia = $value["asistencia_apreciacion"];
-			$observa = $value["observa_apreciacion"];
-
-		}
-
-		if ($_GET["area"] == "lenguaje3") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $value["saberes_lenguaje3"];
-			$aprecia = $value["aprecia_lenguaje3"];
-			$asistencia = $value["asistencia_lenguaje3"];
-			$observa = $value["observa_lenguaje3"];
-
-		}
-
-		if ($_GET["area"] == "lenguaje4") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $value["saberes_lenguaje4"];
-			$aprecia = $value["aprecia_lenguaje4"];
-			$asistencia = $value["asistencia_lenguaje4"];
-			$observa = $value["observa_lenguaje4"];
-
-		}
-
-		if ($_GET["area"] == "conjunto4") {
-
-			$area = "C.O. - PRACTICA DE CONJUNTO";
-
-			$saberes = $value["saberes_conjunto4"];
-			$aprecia = $value["aprecia_conjunto4"];
-			$asistencia = $value["asistencia_conjunto4"];
-			$observa = $value["observa_conjunto4"];
-
-		}
-
-
-		if ($_GET["area"] == "vocal4") {
-
-			$area = "C.O. - PRACTICA VOCAL";
-
-			$saberes = $value["saberes_vocal4"];
-			$aprecia = $value["aprecia_vocal4"];
-			$asistencia = $value["asistencia_vocal4"];
-			$observa = $value["observa_vocal4"];
-
-		}
-
-
-		if ($_GET["area"] == "lenguaje5") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $value["saberes_lenguaje5"];
-			$aprecia = $value["aprecia_lenguaje5"];
-			$asistencia = $value["asistencia_lenguaje5"];
-			$observa = $value["observa_lenguaje5"];
-
-		}
-
-		if ($_GET["area"] == "musica") {
-
-			$area = "C.O. - MUSICA Y CONTEXTO HISTORICO SOCIAL";
-
-			$saberes = $value["saberes_musica"];
-			$aprecia = $value["aprecia_musica"];
-			$asistencia = $value["asistencia_musica"];
-			$observa = $value["observa_musica"];
-
-		}
-
-		if ($_GET["area"] == "vocal5") {
-
-			$area = "C.O. - PRACTICA VOCAL";
-
-			$saberes = $value["saberes_vocal5"];
-			$aprecia = $value["aprecia_vocal5"];
-			$asistencia = $value["asistencia_vocal5"];
-			$observa = $value["observa_vocal5"];
-
-		}
-
-		if ($_GET["area"] == "tecnologia") {
-
-			$area = "C.O. - TECNOLOGIA E INFORMATICA APLICADA A LA PRODUCCION MUSICAL";
-
-			$saberes = $value["saberes_tecnologia"];
-			$aprecia = $value["aprecia_tecnologia"];
-			$asistencia = $value["asistencia_tecnologia"];
-			$observa = $value["observa_tecnologia"];
-
-		}
-
-		if ($_GET["area"] == "conjunto5") {
-
-			$area = "C.O. - PRACTICA DE CONJUNTO";
-
-			$saberes = $value["saberes_conjunto5"];
-			$aprecia = $value["aprecia_conjunto5"];
-			$asistencia = $value["asistencia_conjunto5"];
-			$observa = $value["observa_conjunto5"];
-
-		}
 
 
 

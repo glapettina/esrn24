@@ -732,11 +732,11 @@ $(".tablas").on("click", ".btnEditarInformeTierra5", function(){
 	
 })
 
-/*=============================================
-EDITAR INFORME PROYECTO (TURISMO)
-=============================================*/
+/*===================================================
+EDITAR INFORME HISTORIA (EDUCACIÓN)
+===================================================*/
 
-$(".tablas").on("click", ".btnEditarInformeProyecto", function(){
+$(".tablas").on("click", ".btnEditarInformeHistoria", function(){
 
 
 	var idAlumno = $(this).attr("idAlumno");
@@ -750,7 +750,7 @@ $(".tablas").on("click", ".btnEditarInformeProyecto", function(){
 	var datos = new FormData();
 	datos.append("idAlumno", idAlumno);
 	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
+	datos.append("periodo", periodo);	
 
 
 	$.ajax({
@@ -767,12 +767,148 @@ $(".tablas").on("click", ".btnEditarInformeProyecto", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesProyecto").val(respuesta["saberes_proyecto"]);
-			$("#apreciaProyecto").val(respuesta["aprecia_proyecto"]);
-			$("#asistenciaProyecto").val(respuesta["asistencia_proyecto"]);
-			$("#observaProyecto").val(respuesta["observa_proyecto"]);			
+			$("#saberesHistoria").val(respuesta["saberes_historia"]);
+			$("#apreciaHistoria").val(respuesta["aprecia_historia"]);
+			$("#asistenciaHistoria").val(respuesta["asistencia_historia"]);
+			$("#observaHistoria").val(respuesta["observa_historia"]);			
+								
+		}
+	})
+
+	
+})
+
+/*===================================================
+EDITAR INFORME PENSAMIENTO (EDUCACIÓN)
+===================================================*/
+
+$(".tablas").on("click", ".btnEditarInformePensamiento", function(){
 
 
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesPensamiento").val(respuesta["saberes_pensamiento"]);
+			$("#apreciaPensamiento").val(respuesta["aprecia_pensamiento"]);
+			$("#asistenciaPensamiento").val(respuesta["asistencia_pensamiento"]);
+			$("#observaPensamiento").val(respuesta["observa_pensamiento"]);			
+								
+		}
+	})
+
+	
+})
+
+/*===================================================
+EDITAR INFORME SOCIEDAD (EDUCACIÓN)
+===================================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSociedad", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSociedad").val(respuesta["saberes_sociedad"]);
+			$("#apreciaSociedad").val(respuesta["aprecia_sociedad"]);
+			$("#asistenciaSociedad").val(respuesta["asistencia_sociedad"]);
+			$("#observaSociedad").val(respuesta["observa_sociedad"]);			
+								
+		}
+	})
+
+	
+})
+
+/*===================================================
+EDITAR INFORME SOCIOLOGÍA (EDUCACIÓN)
+===================================================*/
+
+$(".tablas").on("click", ".btnEditarInformeSociologia", function(){
+
+
+	var idAlumno = $(this).attr("idAlumno");
+	var tabla = $(this).attr("tabla");
+	var periodo = $(this).attr("periodo");
+
+	var nombre = $(this).attr("nombreAlumno");
+	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
+
+
+	var datos = new FormData();
+	datos.append("idAlumno", idAlumno);
+	datos.append("tabla", tabla);	
+	datos.append("periodo", periodo);	
+
+
+	$.ajax({
+		url: "ajax/informes.ajax.php",
+		method: "POST",
+		data: datos,
+		cache: false,
+		contentType: false,
+		processData: false,
+		dataType: "json",
+		success: function(respuesta){	
+
+
+
+
+			$("#idAlumno").val(respuesta["id"]);
+			$("#saberesSociologia").val(respuesta["saberes_sociologia"]);
+			$("#apreciaSociologia").val(respuesta["aprecia_sociologia"]);
+			$("#asistenciaSociologia").val(respuesta["asistencia_sociologia"]);
+			$("#observaSociologia").val(respuesta["observa_sociologia"]);			
 								
 		}
 	})
@@ -781,8 +917,9 @@ $(".tablas").on("click", ".btnEditarInformeProyecto", function(){
 })
 
 
+
 /*=============================================
-EDITAR INFORME TALLER (TURISMO)
+EDITAR INFORME TALLER (EDUCACIÓN)
 =============================================*/
 
 $(".tablas").on("click", ".btnEditarInformeTaller", function(){
@@ -1172,17 +1309,18 @@ $(".tablas").on("click", ".btnEditarInformeSeminario4", function(){
 	
 })
 
-
 /*=============================================
-EDITAR INFORME CONJUNTO 4 (ARTE - MUSICA)
+EDITAR INFORME EVE
 =============================================*/
 
-$(".tablas").on("click", ".btnEditarInformeConjunto4", function(){
+$(".tablas").on("click", ".btnEditarInformeEve", function(){
+
 
 
 	var idAlumno = $(this).attr("idAlumno");
 	var tabla = $(this).attr("tabla");
 	var periodo = $(this).attr("periodo");
+	
 
 	var nombre = $(this).attr("nombreAlumno");
 	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
@@ -1208,10 +1346,10 @@ $(".tablas").on("click", ".btnEditarInformeConjunto4", function(){
 
 
 			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesConjunto4").val(respuesta["saberes_conjunto4"]);
-			$("#apreciaConjunto4").val(respuesta["aprecia_conjunto4"]);
-			$("#asistenciaConjunto4").val(respuesta["asistencia_conjunto4"]);
-			$("#observaConjunto4").val(respuesta["observa_conjunto4"]);			
+			$("#saberesEve").val(respuesta["saberes_eve"]);
+			$("#apreciaEve").val(respuesta["aprecia_eve"]);
+			$("#asistenciaEve").val(respuesta["asistencia_eve"]);
+			$("#observaEve").val(respuesta["observa_eve"]);			
 
 
 								
@@ -1221,297 +1359,6 @@ $(".tablas").on("click", ".btnEditarInformeConjunto4", function(){
 	
 })
 
-
-/*=============================================
-EDITAR INFORME VOCAL 4 (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeVocal4", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesVocal4").val(respuesta["saberes_vocal4"]);
-			$("#apreciaVocal4").val(respuesta["aprecia_vocal4"]);
-			$("#asistenciaVocal4").val(respuesta["asistencia_vocal4"]);
-			$("#observaVocal4").val(respuesta["observa_vocal4"]);			
-
-
-								
-		}
-	})
-
-	
-})
-
-/*=============================================
-EDITAR LENGUAJE 5 (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeLenguaje5", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);
-	datos.append("periodo", periodo);	
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesLenguaje5").val(respuesta["saberes_lenguaje5"]);
-			$("#apreciaLenguaje5").val(respuesta["aprecia_lenguaje5"]);
-			$("#asistenciaLenguaje5").val(respuesta["asistencia_lenguaje5"]);
-			$("#observaLenguaje5").val(respuesta["observa_lenguaje5"]);			
-
-
-								
-		}
-	})
-
-	
-})
-
-
-/*=============================================
-EDITAR MUSICA (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeMusica", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesMusica").val(respuesta["saberes_musica"]);
-			$("#apreciaMusica").val(respuesta["aprecia_musica"]);
-			$("#asistenciaMusica").val(respuesta["asistencia_musica"]);
-			$("#observaMusica").val(respuesta["observa_musica"]);			
-
-
-								
-		}
-	})
-
-	
-})
-
-
-/*=============================================
-EDITAR VOCAL 5 (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeVocal5", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesVocal5").val(respuesta["saberes_vocal5"]);
-			$("#apreciaVocal5").val(respuesta["aprecia_vocal5"]);
-			$("#asistenciaVocal5").val(respuesta["asistencia_vocal5"]);
-			$("#observaVocal5").val(respuesta["observa_vocal5"]);			
-
-
-								
-		}
-	})
-
-	
-})
-
-/*=============================================
-EDITAR TECNOLOGIA (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeTecnologia", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesTecnologia").val(respuesta["saberes_tecnologia"]);
-			$("#apreciaTecnologia").val(respuesta["aprecia_tecnologia"]);
-			$("#asistenciaTecnologia").val(respuesta["asistencia_tecnologia"]);
-			$("#observaTecnologia").val(respuesta["observa_tecnologia"]);			
-
-
-								
-		}
-	})
-
-	
-})
-
-
-/*=============================================
-EDITAR CONJUNTO 5 (ARTE - MUSICA)
-=============================================*/
-
-$(".tablas").on("click", ".btnEditarInformeConjunto5", function(){
-
-
-	var idAlumno = $(this).attr("idAlumno");
-	var tabla = $(this).attr("tabla");
-	var periodo = $(this).attr("periodo");
-
-	var nombre = $(this).attr("nombreAlumno");
-	$('#alumnoEdicion').html('Editar Informe: ' + nombre);
-
-
-	var datos = new FormData();
-	datos.append("idAlumno", idAlumno);
-	datos.append("tabla", tabla);	
-	datos.append("periodo", periodo);
-
-
-	$.ajax({
-		url: "ajax/informes.ajax.php",
-		method: "POST",
-		data: datos,
-		cache: false,
-		contentType: false,
-		processData: false,
-		dataType: "json",
-		success: function(respuesta){	
-
-
-
-
-			$("#idAlumno").val(respuesta["id"]);
-			$("#saberesConjunto5").val(respuesta["saberes_conjunto5"]);
-			$("#apreciaConjunto5").val(respuesta["aprecia_conjunto5"]);
-			$("#asistenciaConjunto5").val(respuesta["asistencia_conjunto5"]);
-			$("#observaConjunto5").val(respuesta["observa_conjunto5"]);			
-
-
-								
-		}
-	})
-
-	
-})
 
 
 /*=============================================

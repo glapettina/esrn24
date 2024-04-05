@@ -141,211 +141,17 @@ class imprimirReporte{
 			$observa = $respuestaInforme["observa_artistica"];
 
 		}
+		if ($_GET["area"] == "eve") {
 
-		if ($_GET["area"] == "desarrollo") {
+			$area = "ESPACIO E.V.E.";
 
-			$area = "C.O. - DESARROLLO SUSTENTABLE DEL TURISMO";
-
-			$saberes = $respuestaInforme["saberes_desarrollo"];
-			$aprecia = $respuestaInforme["aprecia_desarrollo"];
-			$asistencia = $respuestaInforme["asistencia_desarrollo"];
-			$observa = $respuestaInforme["observa_desarrollo"];
-
-		}
-
-		if ($_GET["area"] == "introduccion") {
-
-			$area = "C.O. - INTRODUCCION AL TURISMO";
-
-			$saberes = $respuestaInforme["saberes_introduccion"];
-			$aprecia = $respuestaInforme["aprecia_introduccion"];
-			$asistencia = $respuestaInforme["asistencia_introduccion"];
-			$observa = $respuestaInforme["observa_introduccion"];
+			$saberes = $respuestaInforme["saberes_eve"];
+			$aprecia = $respuestaInforme["aprecia_eve"];
+			$asistencia = $respuestaInforme["asistencia_eve"];
+			$observa = $respuestaInforme["observa_eve"];
 
 		}
 
-		if ($_GET["area"] == "ambiente") {
-
-			$area = "C.O. - AMBIENTE Y PATRIMONIO";
-
-			$saberes = $respuestaInforme["saberes_ambiente"];
-			$aprecia = $respuestaInforme["aprecia_ambiente"];
-			$asistencia = $respuestaInforme["asistencia_ambiente"];
-			$observa = $respuestaInforme["observa_ambiente"];
-
-		}
-
-		if ($_GET["area"] == "generacion") {
-
-			$area = "C.O. - GENERACION DE EMPRENDIMIENTOS";
-
-			$saberes = $respuestaInforme["saberes_generacion"];
-			$aprecia = $respuestaInforme["aprecia_generacion"];
-			$asistencia = $respuestaInforme["asistencia_generacion"];
-			$observa = $respuestaInforme["observa_generacion"];
-
-		}
-
-		if ($_GET["area"] == "produccion") {
-
-			$area = "C.O. - PRODUCCION DE SERVICIOS TURISTICOS";
-
-			$saberes = $respuestaInforme["saberes_produccion"];
-			$aprecia = $respuestaInforme["aprecia_produccion"];
-			$asistencia = $respuestaInforme["asistencia_produccion"];
-			$observa = $respuestaInforme["observa_produccion"];
-
-		}
-
-
-		if ($_GET["area"] == "comunicacion") {
-
-			$area = "C.O. - COMUNICACION Y TURISMO";
-
-			$saberes = $respuestaInforme["saberes_comunicacion"];
-			$aprecia = $respuestaInforme["aprecia_comunicacion"];
-			$asistencia = $respuestaInforme["asistencia_comunicacion"];
-			$observa = $respuestaInforme["observa_comunicacion"];
-
-		}
-
-
-		if ($_GET["area"] == "proyecto") {
-
-			$area = "C.O. - PROYECTO DE INTERVENCION SOCIOCOMUNITARIA";
-
-			$saberes = $respuestaInforme["saberes_proyecto"];
-			$aprecia = $respuestaInforme["aprecia_proyecto"];
-			$asistencia = $respuestaInforme["asistencia_proyecto"];
-			$observa = $respuestaInforme["observa_proyecto"];
-
-		}
-
-
-
-		if ($_GET["area"] == "taller") {
-
-			$area = "C.O. - TALLER DE TECNICAS INTERPRETATIVAS Y DE ANIMACION SOCIOCULTURAL";
-
-			$saberes = $respuestaInforme["saberes_taller"];
-			$aprecia = $respuestaInforme["aprecia_taller"];
-			$asistencia = $respuestaInforme["asistencia_taller"];
-			$observa = $respuestaInforme["observa_taller"];
-
-		}
-
-		if ($_GET["area"] == "apreciacion") {
-
-			$area = "C.O. - APRECIACION MUSICAL";
-
-			$saberes = $respuestaInforme["saberes_apreciacion"];
-			$aprecia = $respuestaInforme["aprecia_apreciacion"];
-			$asistencia = $respuestaInforme["asistencia_apreciacion"];
-			$observa = $respuestaInforme["observa_apreciacion"];
-
-		}
-
-		if ($_GET["area"] == "lenguaje3") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $respuestaInforme["saberes_lenguaje3"];
-			$aprecia = $respuestaInforme["aprecia_lenguaje3"];
-			$asistencia = $respuestaInforme["asistencia_lenguaje3"];
-			$observa = $respuestaInforme["observa_lenguaje3"];
-
-		}
-
-
-		if ($_GET["area"] == "lenguaje4") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $respuestaInforme["saberes_lenguaje4"];
-			$aprecia = $respuestaInforme["aprecia_lenguaje4"];
-			$asistencia = $respuestaInforme["asistencia_lenguaje4"];
-			$observa = $respuestaInforme["observa_lenguaje4"];
-
-		}
-
-		if ($_GET["area"] == "conjunto4") {
-
-			$area = "C.O. - PRACTICA DE CONJUNTO";
-
-			$saberes = $respuestaInforme["saberes_conjunto4"];
-			$aprecia = $respuestaInforme["aprecia_conjunto4"];
-			$asistencia = $respuestaInforme["asistencia_conjunto4"];
-			$observa = $respuestaInforme["observa_conjunto4"];
-
-		}
-
-
-		if ($_GET["area"] == "vocal4") {
-
-			$area = "C.O. - PRACTICA VOCAL";
-
-			$saberes = $respuestaInforme["saberes_vocal4"];
-			$aprecia = $respuestaInforme["aprecia_vocal4"];
-			$asistencia = $respuestaInforme["asistencia_vocal4"];
-			$observa = $respuestaInforme["observa_vocal4"];
-
-		}
-
-		if ($_GET["area"] == "lenguaje5") {
-
-			$area = "C.O. - LENGUAJE MUSICAL Y PRACTICA INSTRUMENTAL";
-
-			$saberes = $respuestaInforme["saberes_lenguaje5"];
-			$aprecia = $respuestaInforme["aprecia_lenguaje5"];
-			$asistencia = $respuestaInforme["asistencia_lenguaje5"];
-			$observa = $respuestaInforme["observa_lenguaje5"];
-
-		}
-
-
-		if ($_GET["area"] == "musica") {
-
-			$area = "C.O. - MUSICA Y CONTEXTO HISTORICO SOCIAL";
-
-			$saberes = $respuestaInforme["saberes_musica"];
-			$aprecia = $respuestaInforme["aprecia_musica"];
-			$asistencia = $respuestaInforme["asistencia_musica"];
-			$observa = $respuestaInforme["observa_musica"];
-
-		}
-
-		if ($_GET["area"] == "vocal5") {
-
-			$area = "C.O. - PRACTICA VOCAL";
-
-			$saberes = $respuestaInforme["saberes_vocal5"];
-			$aprecia = $respuestaInforme["aprecia_vocal5"];
-			$asistencia = $respuestaInforme["asistencia_vocal5"];
-			$observa = $respuestaInforme["observa_vocal5"];
-
-		}
-
-		if ($_GET["area"] == "tecnologia") {
-
-			$area = "C.O. - TECNOLOGIA E INFORMATICA APLICADA A LA PRODUCCION MUSICAL";
-
-			$saberes = $respuestaInforme["saberes_tecnologia"];
-			$aprecia = $respuestaInforme["aprecia_tecnologia"];
-			$asistencia = $respuestaInforme["asistencia_tecnologia"];
-			$observa = $respuestaInforme["observa_tecnologia"];
-
-		}
-
-		if ($_GET["area"] == "conjunto5") {
-
-			$area = "C.O. - PRACTICA DE CONJUNTO";
-
-			$saberes = $respuestaInforme["saberes_conjunto5"];
-			$aprecia = $respuestaInforme["aprecia_conjunto5"];
-			$asistencia = $respuestaInforme["asistencia_conjunto5"];
-			$observa = $respuestaInforme["observa_conjunto5"];
-
-		}
 					
 
 
@@ -593,7 +399,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				ASISTENCIA
+				ASISTENCIA (%)
 
 			</td>	
 

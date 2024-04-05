@@ -397,7 +397,7 @@
 
             <?php
 
-            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Turismo") {
+            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Ciencias Naturales") {
 
 
                   echo'<li class="treeview">
@@ -491,7 +491,7 @@
 
             <?php
 
-            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Arte-Música") {
+            if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "Docente Modalidad Educación") {
 
 
                   echo'<li class="treeview">
@@ -561,33 +561,33 @@
                             <ul class="treeview-menu">
                                 <li class="treeview">
                                       <li>
-                                          <a href="5-lenguaje-arte-musica">
+                                          <a href="5-historia-educacion">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Leng.Musical y Prac.Inst.                          
+                                              Historia Social                          
                                           </a>
                                       </li>
                                      <li>
-                                          <a href="5-musica-arte-musica">
+                                          <a href="5-pensamiento-educacion">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Mús.y Contexto Histórico Social                          
+                                              Pensamiento Pedagógico                          
                                           </a>
                                      </li>
                                      <li>
-                                          <a href="5-vocal-arte-musica">
+                                          <a href="5-sociedad-educacion">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Práctica Vocal                          
+                                              Sociedad, Cultura                          
                                           </a>
                                       </li> 
                                       <li>
-                                          <a href="5-tecnologia-arte-musica">
+                                          <a href="5-sociologia-educacion">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Tec.e Inf.Aplicada Prod.Musical                          
+                                              Sociología Organizaciones                          
                                           </a>
                                       </li> 
                                       <li>
-                                          <a href="5-conjunto-arte-musica">
+                                          <a href="5-taller-educacion">
                                           <i class="fa fa-check-circle-o"></i>
-                                              Práctica de Conjunto                          
+                                              Taller Proy. Socio-Educativos                          
                                           </a>
                                       </li>                                        
                               </li>
@@ -600,6 +600,53 @@
              }
 
             ?> 
+
+              <?php
+
+
+              if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo" || $_SESSION["perfil"] == "REVE") {
+
+
+                  echo'<li class="treeview">
+                      <a href="#">
+                        <i class="fa fa-graduation-cap" aria-hidden="true"></i> <span>Espacio EVE</span>
+                          <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                      </a>
+
+                    <ul class="treeview-menu">
+                        <li><a href="11tm-eve"><i class="fa fa-circle-o"></i> 1º 1ra. - TM</a></li>
+                        <li><a href="12tm-eve"><i class="fa fa-circle-o"></i> 1º 2da. - TM</a></li>
+                        <li><a href="11tt-eve"><i class="fa fa-circle-o"></i> 1º 1ra. - TT</a></li>
+                        <li><a href="12tt-eve"><i class="fa fa-circle-o"></i> 1º 2da. - TT</a></li>
+                        <li><a href="21tm-eve"><i class="fa fa-circle-o"></i> 2º 1ra. - TM</a></li>
+                        <li><a href="22tm-eve"><i class="fa fa-circle-o"></i> 2º 2da. - TM</a></li>
+                        <li><a href="21tt-eve"><i class="fa fa-circle-o"></i> 2º 1ra. - TT</a></li>
+                        <li><a href="22tt-eve"><i class="fa fa-circle-o"></i> 2º 2da. - TT</a></li>
+                        <li><a href="23tt-eve"><i class="fa fa-circle-o"></i> 2º 3ra. - TT</a></li>
+                        <li><a href="31tm-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TM</a></li>
+                        <li><a href="32tm-eve"><i class="fa fa-circle-o"></i> 3º 2da. - TM</a></li>
+                        <li><a href="33tm-eve"><i class="fa fa-circle-o"></i> 3º 3ra. - TM</a></li>
+                        <li><a href="31tt-eve"><i class="fa fa-circle-o"></i> 3º 1ra. - TT</a></li>
+                        <li><a href="32tt-eve"><i class="fa fa-circle-o"></i> 3º 2da. - TT</a></li>
+                        <li><a href="33tt-eve"><i class="fa fa-circle-o"></i> 3º 3ra. - TT</a></li>
+                        <li><a href="41tm-eve"><i class="fa fa-circle-o"></i> 4º 1ra. - TM</a></li>
+                        <li><a href="42tm-eve"><i class="fa fa-circle-o"></i> 4º 2da. - TM</a></li>
+                        <li><a href="43tm-eve"><i class="fa fa-circle-o"></i> 4º 3ra. - TM</a></li>
+                        <li><a href="41tt-eve"><i class="fa fa-circle-o"></i> 4º 1ra. - TT</a></li>
+                        <li><a href="42tt-eve"><i class="fa fa-circle-o"></i> 4º 2da. - TT</a></li>
+                        <li><a href="51tm-eve"><i class="fa fa-circle-o"></i> 5º 1ra. - TM</a></li>
+                        <li><a href="52tm-eve"><i class="fa fa-circle-o"></i> 5º 2da. - TM</a></li>
+                        <li><a href="51tt-eve"><i class="fa fa-circle-o"></i> 5º 1ra. - TT</a></li>
+                        <li><a href="52tt-eve"><i class="fa fa-circle-o"></i> 5º 2da. - TT</a></li>
+                    </ul>
+
+                
+                  </li>';
+
+                    }
+
+                  ?>
                 
 
 

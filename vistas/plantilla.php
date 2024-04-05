@@ -269,20 +269,35 @@
           $_GET["ruta"] == "5-biotecnologia-ciencias-naturales" ||
           $_GET["ruta"] == "5-ciencia-ciencias-naturales" ||
           $_GET["ruta"] == "5-tierra-ciencias-naturales" ||
-          $_GET["ruta"] == "4-produccion-turismo" ||
-          $_GET["ruta"] == "5-comunicacion-turismo" ||
-          $_GET["ruta"] == "5-proyecto-turismo" ||
-          $_GET["ruta"] == "5-taller-turismo" ||
-          $_GET["ruta"] == "3-apreciacion-arte-musica" ||
-          $_GET["ruta"] == "3-lenguaje-arte-musica" ||
-          $_GET["ruta"] == "4-lenguaje-arte-musica" ||
-          $_GET["ruta"] == "4-conjunto-arte-musica" ||
-          $_GET["ruta"] == "4-vocal-arte-musica" ||
-          $_GET["ruta"] == "5-lenguaje-arte-musica" ||
-          $_GET["ruta"] == "5-musica-arte-musica" ||
-          $_GET["ruta"] == "5-vocal-arte-musica" ||
-          $_GET["ruta"] == "5-tecnologia-arte-musica" ||
-          $_GET["ruta"] == "5-conjunto-arte-musica" ||
+          $_GET["ruta"] == "5-historia-educacion" ||
+          $_GET["ruta"] == "5-pensamiento-educacion" ||
+          $_GET["ruta"] == "5-sociedad-educacion" ||
+          $_GET["ruta"] == "5-sociologia-educacion" ||
+          $_GET["ruta"] == "5-taller-educacion" ||
+          $_GET["ruta"] == "11tm-eve" ||
+          $_GET["ruta"] == "12tm-eve" ||
+          $_GET["ruta"] == "11tt-eve" ||
+          $_GET["ruta"] == "12tt-eve" ||
+          $_GET["ruta"] == "21tm-eve" ||
+          $_GET["ruta"] == "22tm-eve" ||
+          $_GET["ruta"] == "21tt-eve" ||
+          $_GET["ruta"] == "22tt-eve" ||
+          $_GET["ruta"] == "23tt-eve" ||
+          $_GET["ruta"] == "31tm-eve" ||
+          $_GET["ruta"] == "32tm-eve" ||
+          $_GET["ruta"] == "33tm-eve" ||
+          $_GET["ruta"] == "31tt-eve" ||
+          $_GET["ruta"] == "32tt-eve" ||
+          $_GET["ruta"] == "33tt-eve" ||
+          $_GET["ruta"] == "41tm-eve" ||
+          $_GET["ruta"] == "42tm-eve" ||
+          $_GET["ruta"] == "43tm-eve" ||
+          $_GET["ruta"] == "41tt-eve" ||
+          $_GET["ruta"] == "42tt-eve" ||
+          $_GET["ruta"] == "51tm-eve" ||
+          $_GET["ruta"] == "52tm-eve" ||
+          $_GET["ruta"] == "51tt-eve" ||
+          $_GET["ruta"] == "52tt-eve" ||
           $_GET["ruta"] == "informe-area" ||
           $_GET["ruta"] == "informe-area-orientacion" ||
           $_GET["ruta"] == "salir") {
