@@ -191,9 +191,9 @@ $pdf->writeHTML($bloque2, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 $bloque3 = <<<EOF
 
@@ -250,7 +250,7 @@ $pdf->writeHTML($bloque3, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque4 = <<<EOF
@@ -312,7 +312,7 @@ $pdf->writeHTML($bloque4, false, false, false, false, '');
 //--------------------------------------------------------
 
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque5 = <<<EOF
@@ -333,7 +333,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				AREAS DEL CONOCIMIENTO
+				ÁREAS DEL CONOCIMIENTO
 
 
 			</td>
@@ -352,7 +352,7 @@ $bloque5 = <<<EOF
 
 				<br>
 
-				APRECIACION CUALITATIVA
+				APRECIACIÓN CUALITATIVA
 
 
 			</td>
@@ -386,7 +386,7 @@ $pdf->writeHTML($bloque5, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque6 = <<<EOF
@@ -403,7 +403,7 @@ $bloque6 = <<<EOF
 
 				<br>
 
-				CIENTIFICA Y TECNOLOGICA
+				CIENTÍFICA Y TECNOLÓGICA
 
 
 			</td>
@@ -456,7 +456,7 @@ $pdf->writeHTML($bloque6, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque7 = <<<EOF
@@ -526,7 +526,7 @@ $pdf->writeHTML($bloque7, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque8 = <<<EOF
@@ -596,7 +596,7 @@ $pdf->writeHTML($bloque8, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque9 = <<<EOF
@@ -666,7 +666,7 @@ $pdf->writeHTML($bloque9, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque10 = <<<EOF
@@ -683,7 +683,7 @@ $bloque10 = <<<EOF
 
 				<br>
 
-				MATEMATICA
+				MATEMÁTICA
 
 
 			</td>
@@ -736,7 +736,7 @@ $pdf->writeHTML($bloque10, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque11 = <<<EOF
@@ -753,7 +753,7 @@ $bloque11 = <<<EOF
 
 				<br>
 
-				EDUCACION FISICA
+				EDUCACIÓN FÍSICA
 
 
 			</td>
@@ -806,7 +806,7 @@ $pdf->writeHTML($bloque11, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque12 = <<<EOF
@@ -823,7 +823,7 @@ $bloque12 = <<<EOF
 
 				<br>
 
-				EDUCACION ARTISTICA
+				EDUCACIÓN ARTÍSTICA
 
 
 			</td>
@@ -876,13 +876,83 @@ $pdf->writeHTML($bloque12, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-
-if ($modalidad == "Ciencias Naturales") {
-
-	//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
 $bloque13 = <<<EOF
+
+	<table style="font-size:10px; padding:5px 10px;">
+
+	
+
+		
+
+		<tr>
+
+			<td style="font-size: 7px; text-align: center; border: 1px solid #666; background-color:white; width:180px">
+
+				<br>
+
+				ESPACIO E.V.E.
+
+
+			</td>
+
+
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:200px">
+
+				<br>
+
+				$respuestaInforme[saberes_eve]
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:150px">
+
+				<br>
+
+				$respuestaInforme[aprecia_eve]
+
+
+			</td>
+
+			<td style="font-size: 8px; text-align: center; border: 1px solid #666; background-color:white; width:62px">
+
+				<br>
+
+				$respuestaInforme[asistencia_eve]
+
+			</td>	
+
+			<td style="font-size: 8px; text-align: justify; border: 1px solid #666; background-color:white; width:188px">
+
+				<br>
+
+				$respuestaInforme[observa_eve]
+
+			</td>	
+
+
+
+		</tr>
+
+	</table>
+
+EOF;
+
+
+$pdf->writeHTML($bloque13, false, false, false, false, '');
+
+//--------------------------------------------------------
+
+
+if ($modalidad == "Ciencias Naturales") {
+
+	//----------------------------------------------------
+
+
+$bloque14 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -945,14 +1015,14 @@ $bloque13 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque13, false, false, false, false, '');
+$pdf->writeHTML($bloque14, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
-$bloque14 = <<<EOF
+$bloque15 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -1015,18 +1085,18 @@ $bloque14 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque14, false, false, false, false, '');
+$pdf->writeHTML($bloque15, false, false, false, false, '');
 
-//----------------------------------------------------------------------------------
+//----------------------------------------------------------
 
 
 	
 }else{
 
-	//----------------------------------------------------------------------------------
+	//------------------------------------------------------
 
 
-$bloque13 = <<<EOF
+$bloque14 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -1089,14 +1159,14 @@ $bloque13 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque13, false, false, false, false, '');
+$pdf->writeHTML($bloque14, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
-$bloque14 = <<<EOF
+$bloque15 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -1159,14 +1229,14 @@ $bloque14 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque14, false, false, false, false, '');
+$pdf->writeHTML($bloque15, false, false, false, false, '');
 
 //--------------------------------------------------------
 
-//----------------------------------------------------------------------------------
+//--------------------------------------------------------
 
 
-$bloque15 = <<<EOF
+$bloque16 = <<<EOF
 
 	<table style="font-size:10px; padding:5px 10px;">
 
@@ -1229,7 +1299,7 @@ $bloque15 = <<<EOF
 EOF;
 
 
-$pdf->writeHTML($bloque15, false, false, false, false, '');
+$pdf->writeHTML($bloque16, false, false, false, false, '');
 
 //--------------------------------------------------------
 
