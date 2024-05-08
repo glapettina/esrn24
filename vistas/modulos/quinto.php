@@ -90,11 +90,11 @@
 
                               if ($value["estado"] != 0) {
                               
-                                echo '<td><button class="btn btn-success btn-xs btnActivar" tabla="tercero" idAlumno="'.$value["id"].'" estadoAlumno="0">Activado</button></td>';
+                                echo '<td><button class="btn btn-success btn-xs btnActivar" tabla="quinto" idAlumno="'.$value["id"].'" estadoAlumno="0">Activado</button></td>';
 
                             }else{
 
-                                echo '<td><button class="btn btn-danger btn-xs btnActivar" tabla="tercero" idAlumno="'.$value["id"].'" estadoAlumno="1">Desactivado</button></td>';
+                                echo '<td><button class="btn btn-danger btn-xs btnActivar" tabla="quinto" idAlumno="'.$value["id"].'" estadoAlumno="1">Desactivado</button></td>';
                             }
                             
                           }else{
