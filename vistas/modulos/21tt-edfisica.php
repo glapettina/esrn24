@@ -225,7 +225,7 @@
                 <div class="input-group">
                   
                   <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                  <input class="form-control input-lg" type="text" name="asistenciadFisica" id="asistenciaCientifica" placeholder="Ingresar asistencia (%)" required>
+                  <input class="form-control input-lg" type="text" name="asistenciaFisica" id="asistenciaFisica" placeholder="Ingresar asistencia (%)" required>
 
                 </div>
 
