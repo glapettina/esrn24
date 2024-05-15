@@ -1205,6 +1205,36 @@
 		}
 
 
+		/*===================================================
+		EDITAR INFORME TALLER (EDUCACIÓN)           
+		===================================================*/
+
+		static public function mdlEditarInformeTaller($tabla, $curso, $datos){
+
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET saberes_taller = :saberes_taller, aprecia_taller = :aprecia_taller, asistencia_taller = :asistencia_taller, observa_taller = :observa_taller, id_usuario = :id_usuario WHERE id = :id");
+
+			$stmt->bindParam(":id", $datos["id"], PDO::PARAM_INT);
+			$stmt->bindParam(":saberes_taller", $datos["saberes_taller"], PDO::PARAM_STR);
+			$stmt->bindParam(":aprecia_taller", $datos["aprecia_taller"], PDO::PARAM_STR);
+			$stmt->bindParam(":asistencia_taller", $datos["asistencia_taller"], PDO::PARAM_STR);
+			$stmt->bindParam(":observa_taller", $datos["observa_taller"], PDO::PARAM_STR);
+			$stmt->bindParam(":id_usuario", $datos["id_usuario"], PDO::PARAM_INT);
+
+
+			if ($stmt->execute()) {
+				
+				return "ok";
+			}else{
+
+				return "error";
+			}
+
+			$stmt->close();
+			$stmt = null;
+
+		}
+
+
 
 		/*=============================================
 		EDITAR INFORME QUIMICA (CIENCIAS NATURALES)            
