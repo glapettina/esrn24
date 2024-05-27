@@ -141,6 +141,172 @@ class imprimirReporte{
 			$observa = $respuestaInforme["observa_artistica"];
 
 		}
+
+		if ($_GET["area"] == "quimica") {
+
+			$area = "QUÍMICA AMBIENTAL";
+
+			$saberes = $respuestaInforme["saberes_quimica"];
+			$aprecia = $respuestaInforme["aprecia_quimica"];
+			$asistencia = $respuestaInforme["asistencia_quimica"];
+			$observa = $respuestaInforme["observa_quimica"];
+
+		}
+
+		if ($_GET["area"] == "seminario3") {
+
+			$area = "SEMINARIO-TALLER EDUCACIÓN, CULTURA(S) Y SUBJETIVIDADES";
+
+			$saberes = $respuestaInforme["saberes_seminario3"];
+			$aprecia = $respuestaInforme["aprecia_seminario3"];
+			$asistencia = $respuestaInforme["asistencia_seminario3"];
+			$observa = $respuestaInforme["observa_seminario3"];
+
+		}
+
+		if ($_GET["area"] == "tierra4") {
+
+			$area = "CIENCIAS DE LA TIERRA I";
+
+			$saberes = $respuestaInforme["saberes_tierra4"];
+			$aprecia = $respuestaInforme["aprecia_tierra4"];
+			$asistencia = $respuestaInforme["asistencia_tierra4"];
+			$observa = $respuestaInforme["observa_tierra4"];
+
+		}
+
+		if ($_GET["area"] == "fisica4") {
+
+			$area = "FÍSICA AMBIENTAL";
+
+			$saberes = $respuestaInforme["saberes_fisica4"];
+			$aprecia = $respuestaInforme["aprecia_fisica4"];
+			$asistencia = $respuestaInforme["asistencia_fisica4"];
+			$observa = $respuestaInforme["observa_fisica4"];
+
+		}
+
+		if ($_GET["area"] == "pedagogia") {
+
+			$area = "PEDAGOGÍA";
+
+			$saberes = $respuestaInforme["saberes_pedagogia"];
+			$aprecia = $respuestaInforme["aprecia_pedagogia"];
+			$asistencia = $respuestaInforme["asistencia_pedagogia"];
+			$observa = $respuestaInforme["observa_pedagogia"];
+
+		}
+
+		if ($_GET["area"] == "psicologia") {
+
+			$area = "PSICOLOGÍA DE LA ADOLESCENCIA";
+
+			$saberes = $respuestaInforme["saberes_psicologia"];
+			$aprecia = $respuestaInforme["aprecia_psicologia"];
+			$asistencia = $respuestaInforme["asistencia_psicologia"];
+			$observa = $respuestaInforme["observa_psicologia"];
+
+		}
+
+		if ($_GET["area"] == "seminario4") {
+
+			$area = "SEMINARIO-TALLER EDUCACIÓN, JUVENTUDES Y PARTICIPACIÓN";
+
+			$saberes = $respuestaInforme["saberes_seminario4"];
+			$aprecia = $respuestaInforme["aprecia_seminario4"];
+			$asistencia = $respuestaInforme["asistencia_seminario4"];
+			$observa = $respuestaInforme["observa_seminario4"];
+
+		}
+
+		if ($_GET["area"] == "biotecnologia") {
+
+			$area = "BIOTECNOLOGIA";
+
+			$saberes = $respuestaInforme["saberes_biotecnologia"];
+			$aprecia = $respuestaInforme["aprecia_biotecnologia"];
+			$asistencia = $respuestaInforme["asistencia_biotecnologia"];
+			$observa = $respuestaInforme["observa_biotecnologia"];
+
+		}
+
+		if ($_GET["area"] == "ciencia") {
+
+			$area = "CIENCIA, TECNOLOGÍA, SOCIEDAD, AMBIENTE Y VALORES";
+
+			$saberes = $respuestaInforme["saberes_ciencia"];
+			$aprecia = $respuestaInforme["aprecia_ciencia"];
+			$asistencia = $respuestaInforme["asistencia_ciencia"];
+			$observa = $respuestaInforme["observa_ciencia"];
+
+		}
+
+		if ($_GET["area"] == "tierra5") {
+
+			$area = "CIENCIAS DE LA TIERRA II";
+
+			$saberes = $respuestaInforme["saberes_tierra5"];
+			$aprecia = $respuestaInforme["aprecia_tierra5"];
+			$asistencia = $respuestaInforme["asistencia_tierra5"];
+			$observa = $respuestaInforme["observa_tierra5"];
+
+		}
+
+		if ($_GET["area"] == "historia") {
+
+			$area = "HISTORIA SOCIAL Y POLÍTICA DE LA EDUCACIÓN";
+
+			$saberes = $respuestaInforme["saberes_historia"];
+			$aprecia = $respuestaInforme["aprecia_historia"];
+			$asistencia = $respuestaInforme["asistencia_historia"];
+			$observa = $respuestaInforme["observa_historia"];
+
+		}
+
+		if ($_GET["area"] == "pensamiento") {
+
+			$area = "PENSAMIENTO PEDAGÓGICO ARGENTINO Y LATINOAMERICANO";
+
+			$saberes = $respuestaInforme["saberes_pensamiento"];
+			$aprecia = $respuestaInforme["aprecia_pensamiento"];
+			$asistencia = $respuestaInforme["asistencia_pensamiento"];
+			$observa = $respuestaInforme["observa_pensamiento"];
+
+		}
+
+		if ($_GET["area"] == "sociedad") {
+
+			$area = "SOCIEDAD, CULTURA Y JUVENTUDES";
+
+			$saberes = $respuestaInforme["saberes_sociedad"];
+			$aprecia = $respuestaInforme["aprecia_sociedad"];
+			$asistencia = $respuestaInforme["asistencia_sociedad"];
+			$observa = $respuestaInforme["observa_sociedad"];
+
+		}
+
+		if ($_GET["area"] == "sociologia") {
+
+			$area = "SOCILOGÍA DE LAS ORGANIZACIONES";
+
+			$saberes = $respuestaInforme["saberes_sociologia"];
+			$aprecia = $respuestaInforme["aprecia_sociologia"];
+			$asistencia = $respuestaInforme["asistencia_sociologia"];
+			$observa = $respuestaInforme["observa_sociologia"];
+
+		}
+
+		if ($_GET["area"] == "taller") {
+
+			$area = "TALLER DE PRODUCCIÓN DE PROYECTOS SOCIO-EDUCATIVOS";
+
+			$saberes = $respuestaInforme["saberes_taller"];
+			$aprecia = $respuestaInforme["aprecia_taller"];
+			$asistencia = $respuestaInforme["asistencia_taller"];
+			$observa = $respuestaInforme["observa_taller"];
+
+		}
+
 		if ($_GET["area"] == "eve") {
 
 			$area = "ESPACIO E.V.E.";
