@@ -689,6 +689,23 @@
 
 		?>
 
+    <?php
+
+    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
+
+      echo '<li>
+        <a href="periodos">
+
+          <i class="fa fa-calendar-check-o"></i>
+          <span>Períodos</span>
+
+        </a>
+      </li>';
+
+    }
+
+    ?>
+
 		<!-- <?php
 
 			if ($_SESSION["perfil"] == "Administrador") {
