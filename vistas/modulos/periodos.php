@@ -241,6 +241,7 @@
           </div>
 
           <?php
+              
 
               $editarperiodo = new ControladorPeriodos();
               $editarperiodo -> ctrEditarPeriodo();

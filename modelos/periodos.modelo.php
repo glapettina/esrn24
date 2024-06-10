@@ -35,7 +35,7 @@
 	                    MOSTRAR PERÍODOS            
 		=============================================*/
 
-		static public function mdlMostrarPeriodos($tabla, $item, $valor){
+		static public function mdlMostrarPeriodos($tabla, $item, $valor, $ingreso){
 
 			if ($item != null) {
 				
@@ -47,9 +47,16 @@
 
 				return $stmt -> fetch();
 
-			}else{
+			}else if($ingreso != 1){
 
 				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+
+				$stmt -> execute();
+
+				return $stmt -> fetchAll();
+			}else{
+
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE estado= 1");
 
 				$stmt -> execute();
 

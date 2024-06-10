@@ -78,11 +78,11 @@ class ControladorPeriodos{
         				MOSTRAR PERÍODOS            
 		=============================================*/
 
-		static public function ctrMostrarPeriodos($item, $valor){
+		static public function ctrMostrarPeriodos($item, $valor, $ingreso){
 
 			$tabla = "periodos";
 
-			$respuesta = ModeloPeriodos::mdlMostrarPeriodos($tabla, $item, $valor);
+			$respuesta = ModeloPeriodos::mdlMostrarPeriodos($tabla, $item, $valor, $ingreso);
 
 			return $respuesta;
 		}
