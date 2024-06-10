@@ -113,6 +113,7 @@
           $_GET["ruta"] == "ciudades" ||
           $_GET["ruta"] == "movilidad" ||
           $_GET["ruta"] == "periodos" ||
+          $_GET["ruta"] == "espacios" ||
           $_GET["ruta"] == "movilidad-fecha" ||
           $_GET["ruta"] == "resumen-movilidad" ||
           $_GET["ruta"] == "resumen-docente" ||
@@ -373,6 +374,7 @@
 <script src="vistas/js/servicios.js"></script>
 <script src="vistas/js/informes.js"></script>
 <script src="vistas/js/periodos.js"></script>
+<script src="vistas/js/espacios.js"></script>
 
 
 <!--CAMPO FECHA - DATEPICKER-->

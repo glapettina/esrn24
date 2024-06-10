@@ -1,22 +1,22 @@
 <?php
 
 
-class ControladorPeriodos{
+class ControladorEspacios{
 
 	/*=============================================
-	            REGISTRO DE PERÍODO            
+	            REGISTRO DE ESPACIO            
 	=============================================*/
 	
-	static public function ctrCrearPeriodo(){
+	static public function ctrCrearEspacio(){
 
-		if (isset($_POST["nuevoPeriodo"])) {
+		if (isset($_POST["nuevoEspacio"])) {
 			
 				
-				$tabla = "periodos";
+				$tabla = "espacios";
 
-				$datos = array("nombre" => $_POST["nuevoPeriodo"]);
+				$datos = array("nombre" => $_POST["nuevoEspacio"]);
 
-				$respuesta = ModeloPeriodos::mdlIngresarPeriodo($tabla, $datos);
+				$respuesta = ModeloEspacios::mdlIngresarEspacio($tabla, $datos);
 
 				if ($respuesta == "ok") {
 					
@@ -25,7 +25,7 @@ class ControladorPeriodos{
 					swal({
 
 						type: "success",
-						title: "El período ha sido creado correctamente",
+						title: "El espacio ha sido creado correctamente",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar",
 						closeOnConfirm: false							
@@ -34,7 +34,7 @@ class ControladorPeriodos{
 
 						if(result.value){
 
-							window.location = "periodos";
+							window.location = "espacios";
 							
 							}
 
@@ -51,7 +51,7 @@ class ControladorPeriodos{
 					swal({
 
 						type: "error",
-						title: "El período no puede ir vacío",
+						title: "El espacio no puede ir vacío",
 						showConfirmButton: true,
 						confirmButtonText: "Cerrar",
 						closeOnConfirm: false							
@@ -60,7 +60,7 @@ class ControladorPeriodos{
 
 						if(result.value){
 
-							window.location = "periodos";
+							window.location = "espacios";
 							
 							}
 
@@ -75,34 +75,34 @@ class ControladorPeriodos{
 
 
 		/*=============================================
-        				MOSTRAR PERÍODOS            
+        				MOSTRAR ESPACIOS            
 		=============================================*/
 
-		static public function ctrMostrarPeriodos($item, $valor){
+		static public function ctrMostrarEspacios($item, $valor){
 
-			$tabla = "periodos";
+			$tabla = "espacios";
 
-			$respuesta = ModeloPeriodos::mdlMostrarPeriodos($tabla, $item, $valor);
+			$respuesta = ModeloEspacios::mdlMostrarEspacios($tabla, $item, $valor);
 
 			return $respuesta;
 		}
 
 
 		/*=============================================
-						EDITAR PERÍODO
+						EDITAR ESPACIO
 		=============================================*/
 
-		static public function ctrEditarPeriodo(){
+		static public function ctrEditarEspacio(){
 
-			if (isset($_POST["editarPeriodo"])) {
+			if (isset($_POST["editarEspacio"])) {
 				
-				if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ. \/]+$/', $_POST["editarPeriodo"])) {
+				if (preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ. \/]+$/', $_POST["editarEspacio"])) {
 					
-					$tabla = "periodos";
+					$tabla = "espacios";
 
-					$datos = array("nombre" => $_POST["editarPeriodo"], "id_periodo" => $_POST["idPeriodo"]);
+					$datos = array("nombre" => $_POST["editarEspacio"], "id_espacio" => $_POST["idEspacio"]);
 
-					$respuesta = ModeloPeriodos::mdlEditarPeriodo($tabla, $datos);
+					$respuesta = ModeloEspacios::mdlEditarEspacio($tabla, $datos);
 
 					if ($respuesta == "ok") {
 						
@@ -110,14 +110,14 @@ class ControladorPeriodos{
 
 						swal({
 							type: "success",
-							title: "El período ha sido modificado correctamente",
+							title: "El espacio ha sido modificado correctamente",
 							showConfirmButton: true,
 							confirmButtonText: "Cerrar",
 							closeOnConfirm: false
 							}).then((result)=>{
 								if(result.value){
 
-									window.location = "periodos";										
+									window.location = "espacios";										
 								}
 							})
 
@@ -131,14 +131,14 @@ class ControladorPeriodos{
 
 						swal({
 							type: "error",
-							title: "El período no puede ir vacío o llevar caracteres especiales",
+							title: "El espacio no puede ir vacío o llevar caracteres especiales",
 							showConfirmButton: true,
 							confirmButtonText: "Cerrar",
 							closeOnConfirm: false
 							}).then((result)=>{
 								if(result.value){
 
-									window.location = "periodos";										
+									window.location = "espacios";										
 								}
 							})
 
@@ -149,17 +149,17 @@ class ControladorPeriodos{
 
 
 		/*=============================================
-					BORRAR PERÍODO
+					BORRAR ESPACIO
 		=============================================*/
 
-		static public function ctrBorrarPeriodo(){
+		static public function ctrBorrarEspacio(){
 
-			if (isset($_GET["idPeriodo"])) {
+			if (isset($_GET["idEspacio"])) {
 				
-				$tabla = "periodos";
-				$datos = $_GET["idPeriodo"];
+				$tabla = "espacios";
+				$datos = $_GET["idEspacio"];
 
-				$respuesta = ModeloPeriodos::mdlBorrarPeriodo($tabla, $datos);
+				$respuesta = ModeloEspacios::mdlBorrarEspacio($tabla, $datos);
 
 				if ($respuesta == "ok") {
 					
@@ -167,7 +167,7 @@ class ControladorPeriodos{
 
 						swal({
 							type: "success",
-							title: "El período ha sido borrado correctamente",
+							title: "El espacio ha sido borrado correctamente",
 							showConfirmButton: true,
 							confirmButtonText: "Cerrar",
 							closeOnConfirm: false
@@ -175,7 +175,7 @@ class ControladorPeriodos{
 
 								if(result.value){
 
-									window.location = "periodos";
+									window.location = "espacios";
 								}
 							})
 

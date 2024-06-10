@@ -2,12 +2,12 @@
     
     <section class="content-header">
       <h1>
-        Administrar Períodos
+        Administrar Espacios Curriculares
         
       </h1>
       <ol class="breadcrumb">
         <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li class="active">Administrar Períodos</li>
+        <li class="active">Administrar Espacios Curriculares</li>
       </ol>
     </section>
 
@@ -19,9 +19,9 @@
 
         <div class="box-header with-border">
           
-          <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarPeriodo">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEspacio">
             
-            Agregar Período
+            Agregar Espacio Curricular
           </button>
           
         </div>
@@ -49,9 +49,9 @@
                   $valor = null;
                   $ingreso = 0;
 
-                  $periodos = ControladorPeriodos::ctrMostrarPeriodos($item, $valor, $ingreso);
+                  $espacios = ControladorEspacios::ctrMostrarEspacios($item, $valor, $ingreso);
 
-                  foreach ($periodos as $key => $value) {
+                  foreach ($espacios as $key => $value) {
                     
                     echo '<tr>
                 
@@ -60,19 +60,19 @@
 
                           if ($value["estado"] != 0) {
                           
-                          echo '<td><button class="btn btn-success btn-xs btnActivarPeriodo" idPeriodo="'.$value["id_periodo"].'" estadoPeriodo="0">Activado</button></td>';
+                          echo '<td><button class="btn btn-success btn-xs btnActivarEspacio" idEspacio="'.$value["id_espacio"].'" estadoEspacio="0">Activado</button></td>';
 
                         }else{
 
-                          echo '<td><button class="btn btn-danger btn-xs btnActivarPeriodo" idPeriodo="'.$value["id_periodo"].'" estadoPeriodo="1">Desactivado</button></td>';
+                          echo '<td><button class="btn btn-danger btn-xs btnActivarEspacio" idEspacio="'.$value["id_espacio"].'" estadoEspacio="1">Desactivado</button></td>';
                         }
 
                           echo '<td>
                             
                             <div class="btn-group">
                                 
-                              <button class="btn btn-warning btnEditarPeriodo" idPeriodo="'.$value["id_periodo"].'" data-toggle="modal" data-target="#modalEditarPeriodo"><i class="fa fa-pencil"></i></button>
-                              <button class="btn btn-danger btnEliminarPeriodo" idPeriodo="'.$value["id_periodo"].'"><i class="fa fa-times"></i></button>
+                              <button class="btn btn-warning btnEditarEspacio" idEspacio="'.$value["id_espacio"].'" data-toggle="modal" data-target="#modalEditarEspacio"><i class="fa fa-pencil"></i></button>
+                              <button class="btn btn-danger btnEliminarEspacio" idEspacio="'.$value["id_espacio"].'"><i class="fa fa-times"></i></button>
 
                             </div>
 
@@ -98,11 +98,11 @@
 
 
   <!--=====================================
-            MODAL AGREGAR PERÍODO
+            MODAL AGREGAR ESPACIO
   ======================================-->
 
 
-<div id="modalAgregarPeriodo" class="modal fade" role="dialog">
+<div id="modalAgregarEspacio" class="modal fade" role="dialog">
 
   <div class="modal-dialog">
 
@@ -118,7 +118,7 @@
 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-            <h4 class="modal-title">Agregar Período</h4>
+            <h4 class="modal-title">Agregar Espacio Curricular</h4>
 
           </div>
 
@@ -138,7 +138,7 @@
                 <div class="input-group">
                   
                   <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                  <input class="form-control input-lg" type="text" name="nuevoPeriodo" placeholder="Ingresar período" required>
+                  <input class="form-control input-lg" type="text" name="nuevoEspacio" placeholder="Ingresar espacio curricular" required>
 
                 </div>
 
@@ -158,14 +158,14 @@
 
             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-            <button type="submit" class="btn btn-primary">Guardar Período</button>
+            <button type="submit" class="btn btn-primary">Guardar Espacio Curricular</button>
 
           </div>
 
           <?php
 
-              $crearperiodo = new ControladorPeriodos();
-              $crearperiodo -> ctrCrearPeriodo();
+              $crearespacio = new ControladorEspacios();
+              $crearespacio -> ctrCrearEspacio();
 
           ?>
 
@@ -177,11 +177,11 @@
 
   
   <!--=====================================
-            MODAL EDITAR PERÍODO
+            MODAL EDITAR ESPACIO
   ======================================-->
 
 
-<div id="modalEditarPeriodo" class="modal fade" role="dialog">
+<div id="modalEditarEspacio" class="modal fade" role="dialog">
 
   <div class="modal-dialog">
 
@@ -197,7 +197,7 @@
 
             <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-            <h4 class="modal-title">Editar Período</h4>
+            <h4 class="modal-title">Editar Espacio Curricular</h4>
 
           </div>
 
@@ -217,8 +217,8 @@
                 <div class="input-group">
                   
                   <span class="input-group-addon"><i class="fa fa-th"></i></span>
-                  <input class="form-control input-lg" type="text" name="editarPeriodo" id="editarPeriodo" required>
-                  <input type="hidden" name="idPeriodo" id="idPeriodo">
+                  <input class="form-control input-lg" type="text" name="editarEspacio" id="editarEspacio" required>
+                  <input type="hidden" name="idEspacio" id="idEspacio">
                   
                 </div>
 
@@ -242,8 +242,8 @@
 
           <?php
 
-              $editarperiodo = new ControladorPeriodos();
-              $editarperiodo -> ctrEditarPeriodo();
+              $editarespacio = new ControladorEspacios();
+              $editarespacio -> ctrEditarEspacio();
 
           ?>
 
@@ -255,8 +255,8 @@
 
   <?php
 
-      $borrarperiodo = new ControladorPeriodos();
-      $borrarperiodo -> ctrBorrarPeriodo();
+      $borrarespacio = new ControladorEspacios();
+      $borrarespacio -> ctrBorrarEspacio();
 
   ?>
   

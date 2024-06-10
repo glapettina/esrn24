@@ -655,56 +655,30 @@
 </li>
 </li>
 
-    		<?php
+<?php
 
-	    		if ($_SESSION["perfil"] == "Administrador") {
+if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Secretario" || $_SESSION["perfil"] == "Directivo") {
 
-		    	    echo '<li>
-						<a href="cursos">
+    echo '<li class="treeview">
+          <a href="#">
+            <i class="fa fa-cogs"></i>
+            <span>Mantenimiento</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="cursos"><i class="fa fa-university"></i> Cursos</a></li>
+            <li><a href="espacios"><i class="fa fa-file"></i> Espacios Curriculares</a></li>
+            <li><a href="periodos"><i class="fa fa-calendar-check-o"></i> Períodos</a></li>
+            <li><a href="usuarios"><i class="fa fa-users"></i> Usuarios</a></li>
+          </ul>
+        </li>';
 
-							<i class="fa fa-university"></i>
-							<span>Cursos</span>
-
-						</a>
-					</li>';
-
-			}
-
-			?>
-
-			<?php
-
-				if ($_SESSION["perfil"] == "Administrador") {
-
-				echo '<li>
-					<a href="usuarios">
-
-						<i class="fa fa-users"></i>
-						<span>Usuarios</span>
-
-					</a>
-				</li>';
-
-		}
-
-		?>
-
-    <?php
-
-    if ($_SESSION["perfil"] == "Administrador" || $_SESSION["perfil"] == "Directivo") {
-
-      echo '<li>
-        <a href="periodos">
-
-          <i class="fa fa-calendar-check-o"></i>
-          <span>Períodos</span>
-
-        </a>
-      </li>';
 
     }
 
-    ?>
+  ?>
 
 		<!-- <?php
 

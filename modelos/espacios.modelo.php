@@ -3,15 +3,15 @@
 
 	require_once "conexion.php";
 
-	class ModeloPeriodos{
+	class ModeloEspacios{
 
 
 		/*=============================================
-	                     CREAR PERÍODO           
+	                     CREAR ESPACIO           
 		=============================================*/
 
 
-		static public function mdlIngresarPeriodo($tabla, $datos){
+		static public function mdlIngresarEspacio($tabla, $datos){
 
 			$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre) VALUES (:nombre)");
 
@@ -32,10 +32,10 @@
 
 
 		/*=============================================
-	                    MOSTRAR PERÍODOS            
+	                    MOSTRAR ESPACIOS            
 		=============================================*/
 
-		static public function mdlMostrarPeriodos($tabla, $item, $valor){
+		static public function mdlMostrarEspacios($tabla, $item, $valor){
 
 			if ($item != null) {
 				
@@ -63,10 +63,10 @@
 
 
 		/*=============================================
-	    			ACTUALIZAR PERÍODO            
+	    			ACTUALIZAR ESPACIO            
 		=============================================*/
 
-		static public function mdlActualizarPeriodo($tabla, $item1, $valor1, $item2, $valor2){
+		static public function mdlActualizarEspacio($tabla, $item1, $valor1, $item2, $valor2){
 
 			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET $item1 = :$item1 WHERE $item2 = :$item2");
 
@@ -88,15 +88,15 @@
 
 
 		/*=============================================
-						EDITAR PERÍODO            
+						EDITAR ESPACIO            
 		=============================================*/
 
-		static public function mdlEditarPeriodo($tabla, $datos){
+		static public function mdlEditarEspacio($tabla, $datos){
 
-			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre WHERE id_periodo = :id_periodo");
+			$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre = :nombre WHERE id_espacio = :id_espacio");
 
 			$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-			$stmt->bindParam(":id_periodo", $datos["id_periodo"], PDO::PARAM_INT);
+			$stmt->bindParam(":id_espacio", $datos["id_espacio"], PDO::PARAM_INT);
 
 			if ($stmt->execute()) {
 				
@@ -113,14 +113,14 @@
 		}
 
 		/*=============================================
-						BORRAR PERÍODO            
+						BORRAR ESPACIO            
 		=============================================*/
 
-		static public function mdlBorrarPeriodo($tabla, $datos){
+		static public function mdlBorrarEspacio($tabla, $datos){
 
-			$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id_periodo = :id_periodo");
+			$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id_espacio = :id_espacio");
 
-			$stmt -> bindParam(":id_periodo", $datos, PDO::PARAM_INT);
+			$stmt -> bindParam(":id_espacio", $datos, PDO::PARAM_INT);
 
 			if ($stmt->execute()) {
 				
