@@ -18,7 +18,7 @@
    
 
 
-   <img src="vistas/img/plantilla/escudo.png" class="img-responsive" style="padding:10px 100px 0px 100px">
+   <img src="vistas/img/plantilla/escudo.png" class="img-responsive" style="padding:10px 120px 0px 120px">
  
   </div>
 
